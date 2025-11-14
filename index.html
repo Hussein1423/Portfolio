@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hussein Qaid - TALL Stack & .Net Developer</title>
+      <meta name="description" content="Hussein Qaid, a passionate desktop and web developer. Skilled in C#, .NET, Laravel, Livewire, Alpine.js, SQL Server, and Tall Stack.">
+  <meta name="keywords" content="Desktop Developer, Web Developer, Laravel, Livewire, C#, SQL Server, Alpine.js, Tall Stack">
+<meta name="author" content="Hussein Qaid">
+    
+<link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+<link rel="manifest" href="img/site.webmanifest" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'laravel': '#ff2d20',
+                        'alpine': '#77C1D2',
+                        'livewire': '#fb70a9',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav x-data="{ open: false }" class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-gray-800">HQ</a>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl">.</i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-laravel font-medium">Home</a>
+                    <a href="#skills" class="text-gray-700 hover:text-laravel font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-laravel font-medium">Projects</a>
+                    <a href="#screens" class="text-gray-700 hover:text-laravel font-medium">Screens</a>
+                    <a href="#contact" class="text-gray-700 hover:text-laravel font-medium">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="open" class="md:hidden py-4 border-t">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-laravel">Home</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-laravel">Skills</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-laravel">Projects</a>
+                <a href="#screens" class="block py-2 text-gray-700 hover:text-laravel">Screens</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-laravel">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-sky-900 min-h-screen text-white pt-20">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="text-center">
+                <img src="img/a.jpg" 
+                     alt="My Photo" 
+                     class="rounded-full w-32 h-32 mx-auto mb-8 border-4 border-white shadow-lg">
+                
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Hussein Qaid</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">TALL Stack & Desktop Application Developer</p>
+
+                <p class="text-lg max-w-2xl mx-auto mb-8 opacity-80">
+                  Passionate about building modern, responsive web applications using Laravel, Livewire, Alpine.js, and Tailwind CSS — and crafting efficient, user-focused desktop applications with clean architecture and elegant design.
+                </p>
+
+                
+                <!-- Tech Stack Badges -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Laravel</span>
+                    <span class="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Tailwind CSS</span>
+                    <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Alpine.js</span>
+                    <span class="bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Livewire</span>
+                    <span class="bg-purple-900 text-white px-4 py-2 rounded-full text-sm font-semibold">C# .Net</span>
+                </div>
+                
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Technical Skills</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- TALL Stack Skills -->
+                <div x-data="{ hover: false }" 
+                     @mouseenter="hover = true" 
+                     @mouseleave="hover = false"
+                     class="bg-gray-50 p-8 rounded-xl border-2 border-gray-200 transition duration-300"
+                     :class="hover ? 'border-laravel shadow-lg' : ''">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-laravel text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">TALL Stack</h3>
+                    <ul class="text-gray-600 space-y-3 text-center">
+                        <li>Laravel Framework</li>
+                        <li>Livewire Components</li>
+                        <li>Alpine.js Interactivity</li>
+                        <li>Tailwind CSS Styling</li>
+                    </ul>
+                </div>
+                
+                <!-- Frontend Skills -->
+                <div x-data="{ hover: false }" 
+                     @mouseenter="hover = true" 
+                     @mouseleave="hover = false"
+                     class="bg-gray-50 p-8 rounded-xl border-2 border-gray-200 transition duration-300"
+                     :class="hover ? 'border-purple-500 shadow-lg' : ''">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-code text-purple-500 text-2xl"></i>
+                    </div>
+                   <h3 class="text-2xl font-semibold text-center mb-4">C# .NET</h3>
+                   <ul class="text-gray-600 space-y-3 text-center">
+                     <li>Object-Oriented Programming (OOP)</li>
+                     <li>Windows Forms Development</li>
+                     <li>Web API</li>
+                     <li>SQL Server Integration</li>
+                     <li>Three-Tier Architecture</li>
+                   </ul>
+
+                </div>
+                
+                <!-- Creative Skills -->
+                <div x-data="{ hover: false }" 
+                     @mouseenter="hover = true" 
+                     @mouseleave="hover = false"
+                     class="bg-gray-50 p-8 rounded-xl border-2 border-gray-200 transition duration-300"
+                     :class="hover ? 'border-yellow-400 shadow-lg' : ''">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-database text-yellow-400 text-2xl"></i>
+                    </div>
+                   <h3 class="text-2xl font-semibold text-center mb-4">Database</h3>
+                   <ul class="text-gray-600 space-y-3 text-center">
+                     <li>Strong experience with SQL Server and MySQL</li>
+                     <li>Proficient in writing complex queries using T-SQL</li>
+                     <li>Designing normalized and efficient database structures</li>
+                     <li>Implementing relationships, indexes, and stored procedures for performance</li>
+                   </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Featured Projects</h2>
+            
+            <div x-data="{ activeTab: 'tall' }" class="mb-12">
+                <!-- Tab Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button @click="activeTab = 'tall'" 
+                            :class="activeTab === 'tall' ? 'bg-laravel text-white' : 'bg-white text-gray-700'"
+                            class="px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                        TALL Stack Projects
+                    </button>
+                    <button @click="activeTab = 'desktop'"
+                            :class="activeTab === 'desktop' ? 'bg-purple-500 text-white' : 'bg-white text-gray-700'"
+                            class="px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                        Desktop Projects
+                    </button>
+                </div>
+                
+                <!-- TALL Stack Projects -->
+                <div x-show="activeTab === 'tall'" class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <img src="img/CareerAIHome.png" 
+         alt="CareerAI Home Page" 
+         class="w-full h-48 object-cover" 
+         loading="lazy">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-3">Career AI Platform</h3>
+        <p class="text-gray-600 mb-4">
+            A generative AI-powered web platform for personalized career guidance. 
+            Users upload their CV and specify a target job, then receive customized 
+            interview questions and four AI-generated reports analyzing technical 
+            skills, soft skills, answer quality, and CV–job alignment.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded text-sm">JavaScript</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm">Alpine.js</span>
+            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm">Bootstrap 5</span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm">AI API</span>
+        </div>
+<a href="img/CareerAIHome.png" class="glightbox text-blue-600 font-semibold hover:underline" data-gallery="careerAI">
+  View Project →
+</a>
+<a href="img/CareerAI/Upload cv.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/Interview Type.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/Questions.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/Anaylsising Personality.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/Anaylsising Tech.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/Anaylsing Answers.png" class="glightbox" data-gallery="careerAI"></a>
+<a href="img/CareerAI/cv mataching.png" class="glightbox" data-gallery="careerAI"></a>
+
+</div>
+</div>
+
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+  <img src="img/YemenInHome.png" 
+       alt="YemenIn Home Page" 
+       class="w-full h-48 object-cover" 
+       loading="lazy">
+  <div class="p-6">
+    <h3 class="text-2xl font-semibold mb-3">Web YemenIn</h3>
+    <p class="text-gray-600 mb-4">
+      A professional networking platform inspired by LinkedIn, built from scratch using Laravel and Livewire. 
+      It enables users to connect, interact, and explore job opportunities within a streamlined environment, 
+      and integrates seamlessly with <strong>CareerAI</strong> for AI-powered CV analysis and personalized career insights.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-red-100 text-red-700 px-3 py-1 rounded text-sm">Laravel</span>
+      <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded text-sm">Livewire</span>
+      <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded text-sm">Alpine.js</span>
+      <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm">MySQL</span>
+      <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm">Bootstrap 5</span>
+
+    </div>
+
+    <!-- Gallery links -->
+    <a href="img/YemenInHome.png" class="glightbox text-blue-600 font-semibold hover:underline" data-gallery="yemenIn">
+      View Project →
+    </a>
+    <a href="img/YemenIn/Sign In.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Create Account.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Posts.png" class="glightbox" data-gallery="yemenIn"></a>
+     <a href="img/YemenIn/create post.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/create post with image.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Followings.png" class="glightbox" data-gallery="yemenIn"></a>
+        <a href="img/YemenIn/Followers.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Companies.png" class="glightbox" data-gallery="yemenIn"></a>
+     <a href="img/YemenIn/Chat.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Notifications.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/User-Profile.png" class="glightbox" data-gallery="yemenIn"></a>
+     <a href="img/YemenIn/CV.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Enhancement Profile.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Interesest follower.png" class="glightbox" data-gallery="yemenIn"></a>
+     <a href="img/YemenIn/Search Company.png" class="glightbox" data-gallery="yemenIn"></a>
+     <a href="img/YemenIn/Search Users.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Jobs.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Dashboard home.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Dashboard users.png" class="glightbox" data-gallery="yemenIn"></a>
+    <a href="img/YemenIn/Dashboard jobs.png" class="glightbox" data-gallery="yemenIn"></a>
+
+  </div>
+</div>
+
+                </div>
+                
+                <div x-show="activeTab === 'desktop'" class="grid md:grid-cols-2 gap-8">
+                   <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <img src="img/DVLDLogin.png" 
+         alt="DVLD Login" class="w-full h-70 object-cover" loading="lazy">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-3">DVLD – Driving License Management System</h3>
+        <p class="text-gray-600 mb-4">
+            Desktop application developed using C# and .NET Framework for managing driving licenses. 
+            The system handles core operations including issuing, renewing, and replacing licenses, 
+            test scheduling and results management, with audit logs ensuring data integrity. 
+            Key contributions include designing and implementing features for smooth user interaction, 
+            data validation, and structuring the application with a 3-tier architecture separating 
+            presentation, business logic, and data access layers for enhanced scalability and maintainability.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm">C#</span>
+            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm">.NET Framework</span>
+            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm">SQL Server</span>
+        </div>
+
+        <!-- Gallery links for GLightbox -->
+        <a href="img/DVLDLogin.png" class="glightbox text-cyan-500 font-semibold hover:underline" data-gallery="dvld">
+            View Project →
+        </a>
+        <a href="img/DVLD/Change Password.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Show User.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Users.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Choose Person.png" class="glightbox" data-gallery="dvld"></a>
+         <a href="img/DVLD/Add User.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Drivers.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage People.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Add Person.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage App Types.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Local License.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage International Licenses.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Detain License.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Release License.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Tests Types.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Renew License.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Replacement License.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Street Test.png" class="glightbox" data-gallery="dvld"></a>
+         <a href="img/DVLD/Schedule Street Test.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Written Test.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Schedule Written Test.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Manage Vision Test.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/Schedule Vision Test.png" class="glightbox" data-gallery="dvld"></a>
+        <a href="img/DVLD/History Licenses.png" class="glightbox" data-gallery="dvld"></a>
+    </div>
+</div>
+
+
+
+                     <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+    <img src="img/LibraryLogin.png" 
+         alt="Library Login" class="w-full h-70 object-cover" loading="lazy">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-3">Library Management System</h3>
+        <p class="text-gray-600 mb-4">
+            Desktop application developed using C# and .NET Framework to efficiently manage library operations. 
+            The system includes three user roles: Admin, Instructor, and Student. 
+            Admin oversees all operations, including managing books, users, borrow records, and approving borrowing requests. 
+            Instructors guide specific books and request borrowing, while students can view available books and track their borrow history. 
+            The application follows a 3-tier architecture with a role-based permission system for maintainability, scalability, 
+            and a smooth organized user experience.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm">C#</span>
+            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm">.NET Framework</span>
+            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm">SQL Server</span>
+        </div>
+
+        <!-- Gallery links for GLightbox -->
+        <a href="img/LibraryLogin.png" class="glightbox text-cyan-500 font-semibold hover:underline" data-gallery="library">
+            View Project →
+        </a>
+        <a href="img/Library/Show Users.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Show Requests.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Show unread requests.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Book Re.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Show Book Re.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Screenshot (232).png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Admin Menu.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Add User.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Books.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Show Books.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Add Borrow.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Show Borrow.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Recipent Screen.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Benfiet Screen.png" class="glightbox" data-gallery="library"></a>
+        <a href="img/Library/Request.png" class="glightbox" data-gallery="library"></a>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screens" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Screens From Projects</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="img/eyetest.jpg" 
+                    alt="eye test application" title="Screen From DVLD Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/manageusers.jpg" 
+                     alt="Manage Users page" title="Screen From DVLD Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/Scdeaulwrittingtest.jpg" 
+                     alt="Schedule Writing Test page" title="Screen From DVLD Project" class="rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/AddBook.jpg" 
+                    alt="Add Book In The System" title="Screen From Library Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/ShowUser.jpg" 
+                     alt="Show Users page" title="Screen From Library Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/RequestBook.jpg" 
+                     alt="Request A Book page" title="Screen From Library Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/uploadCV.jpg" 
+                    alt="Upload CV page" title="Screen From CareerAI Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                 <img src="img/skill.jpg" 
+                    alt="Skills Report Page" title="Screen From CareerAI Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                <img src="img/ChooseTest.jpg" 
+                     alt="Choose Test page" title="Screen From CareerAI Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                      <img src="img/profile.jpg" 
+                     alt="profile page" title="Screen From YemenIn Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                      <img src="img/postpage.jpg" 
+                     alt="Post page" title="Screen From YemenIn Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+                      <img src="img/message.jpg" 
+                     alt="Message Page" title="Screen From YemenIn Project" class="h-full rounded-lg shadow-md hover:shadow-xl transition cursor-pointer" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Let’s Build Great Software Together</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                I’m excited to join a team where I can contribute to meaningful projects, solve real problems, and grow as a developer.  
+                If you’re looking for someone dedicated, collaborative, and eager to make an impact, let’s get in touch.
+            </p>
+
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:h.qaid14@email.com" target="_blank" rel="noopener" class="bg-laravel hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                </a>
+                <a href="https://github.com/Hussein1423" rel="noopener" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/husseinQaid/" rel="noopener" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+            
+            <p class="text-gray-400">
+                &copy; 2025 Hussein Qaid. All rights reserved.
+            </p>
+        </div>
+    </section>
+
+<script  src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        <!-- تفعيلها -->
+
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    loop: true, // ✅ يسمح بالتنقل بين الصور بشكل دائري
+  });
+    </script>
+</body>
+</html>
