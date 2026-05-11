@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" role="document">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,33 +87,20 @@
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
 
-    <!-- Custom Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              laravel: "#ff2d20",
-              alpine: "#77C1D2",
-              livewire: "#fb70a9",
-            },
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-
     <style>
       html {
         font-family: "Inter", sans-serif;
       }
     </style>
   </head>
-  <body class="font-inter">
+  <body class="font-inter" role="main">
     <!-- Navigation -->
-    <nav x-data="{ open: false }" class="bg-white shadow-lg fixed w-full z-50">
+    <nav
+      x-data="{ open: false }"
+      class="bg-white shadow-lg fixed w-full z-50"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center py-4">
           <a href="#" class="text-2xl font-bold text-gray-800">HQ</a>
@@ -123,6 +110,7 @@
             <button
               @click="open = !open"
               class="text-gray-600 hover:text-gray-900"
+              title="Toggle Menu"
             >
               <i class="fas fa-bars text-xl"></i>
             </button>
@@ -180,7 +168,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-sky-900 min-h-screen text-white pt-20">
+    <section
+      id="home"
+      class="bg-sky-900 min-h-screen text-white pt-20"
+      role="region"
+      aria-label="Hero Section"
+    >
       <div class="max-w-6xl mx-auto px-6 py-20">
         <div class="text-center">
           <img
@@ -244,7 +237,12 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
+    <section
+      id="skills"
+      class="py-20 bg-white"
+      role="region"
+      aria-label="Skills Section"
+    >
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">Technical Skills</h2>
 
@@ -323,7 +321,12 @@
     </section>
 
     <!-- Interactive Projects Section -->
-    <section id="projects" class="py-20 bg-gray-100">
+    <section
+      id="projects"
+      class="py-20 bg-gray-100"
+      role="region"
+      aria-label="Projects Section"
+    >
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">Featured Projects</h2>
 
@@ -391,36 +394,43 @@
                 </a>
                 <a
                   href="img/CareerAI/Upload cv.png"
+                  title="Upload CV"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/Interview Type.png"
+                  title="Select Interview Type"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/Questions.png"
+                  title="Generated Interview Questions"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/Anaylsising Personality.png"
+                  title="Personality Analysis Report"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/Anaylsising Tech.png"
+                  title="Technical Skills Analysis Report"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/Anaylsing Answers.png"
+                  title="Answer Quality Analysis Report"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
                 <a
                   href="img/CareerAI/cv mataching.png"
+                  title="CV–Job Alignment Report"
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
@@ -477,101 +487,121 @@
                 </a>
                 <a
                   href="img/YemenIn/Sign In.png"
+                  title="Sign In Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Create Account.png"
+                  title="Create Account Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Posts.png"
+                  title="Posts Feed"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/create post.png"
+                  title="Create Post Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/create post with image.png"
+                  title="Create Post with Image"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Followings.png"
+                  title="Followings List"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Followers.png"
+                  title="Followers List"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Companies.png"
+                  title="Companies Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Chat.png"
+                  title="Chat Interface"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Notifications.png"
+                  title="Notifications Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/User-Profile.png"
+                  title="User Profile Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/CV.png"
+                  title="CV Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Enhancement Profile.png"
+                  title="Enhanced Profile Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Interesest follower.png"
+                  title="Interests and Followers"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Search Company.png"
+                  title="Search Companies"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Search Users.png"
+                  title="Search Users"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Jobs.png"
+                  title="Jobs Page"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Dashboard home.png"
+                  title="Dashboard Home"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Dashboard users.png"
+                  title="Dashboard Users Management"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Dashboard jobs.png"
+                  title="Dashboard Jobs Management"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
@@ -637,40 +667,47 @@
                   href="img/Crime/Instructions.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Instructions"
                 ></a>
                 <a
                   href="img/Crime/Players.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Players"
                 ></a>
                 <a
                   href="img/Crime/Crime.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Crime"
                 ></a>
 
                 <a
                   href="img/Crime/Helper Cards.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Helper Cards"
                 ></a>
 
                 <a
                   href="img/Crime/Game.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Game"
                 ></a>
 
                 <a
                   href="img/Crime/Chosen Game.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Chosen Game"
                 ></a>
 
                 <a
                   href="img/Crime/Result.png"
                   class="glightbox"
                   data-gallery="game-desktop"
+                  title="Result"
                 ></a>
               </div>
             </div>
@@ -799,41 +836,49 @@
                   href="img/DVLD/Replacement License.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Replacement License"
                 ></a>
                 <a
                   href="img/DVLD/Manage Street Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Manage Street Test"
                 ></a>
                 <a
                   href="img/DVLD/Schedule Street Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Schedule Street Test"
                 ></a>
                 <a
                   href="img/DVLD/Manage Written Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Manage Written Test"
                 ></a>
                 <a
                   href="img/DVLD/Schedule Written Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Schedule Written Test"
                 ></a>
                 <a
                   href="img/DVLD/Manage Vision Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Manage Vision Test"
                 ></a>
                 <a
                   href="img/DVLD/Schedule Vision Test.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="Schedule Vision Test"
                 ></a>
                 <a
                   href="img/DVLD/History Licenses.png"
                   class="glightbox"
                   data-gallery="dvld"
+                  title="License History"
                 ></a>
               </div>
             </div>
@@ -888,76 +933,91 @@
                   href="img/Library/Show Users.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Users"
                 ></a>
                 <a
                   href="img/Library/Show Requests.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Requests"
                 ></a>
                 <a
                   href="img/Library/Show unread requests.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Unread Requests"
                 ></a>
                 <a
                   href="img/Library/Book Re.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Book Details"
                 ></a>
                 <a
                   href="img/Library/Show Book Re.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Book Details"
                 ></a>
                 <a
                   href="img/Library/Screenshot (232).png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Book Details"
                 ></a>
                 <a
                   href="img/Library/Admin Menu.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Admin Menu"
                 ></a>
                 <a
                   href="img/Library/Add User.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Add User"
                 ></a>
                 <a
                   href="img/Library/Books.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Books Management"
                 ></a>
                 <a
                   href="img/Library/Show Books.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Books"
                 ></a>
                 <a
                   href="img/Library/Add Borrow.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Add Borrow Record"
                 ></a>
                 <a
                   href="img/Library/Show Borrow.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Show Borrow Records"
                 ></a>
                 <a
                   href="img/Library/Recipent Screen.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Recipient Screen"
                 ></a>
                 <a
                   href="img/Library/Benfiet Screen.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Beneficiary Screen"
                 ></a>
                 <a
                   href="img/Library/Request.png"
                   class="glightbox"
                   data-gallery="library"
+                  title="Borrow Request"
                 ></a>
               </div>
             </div>
@@ -966,7 +1026,12 @@
       </div>
     </section>
 
-    <section id="screens" class="py-20 bg-white">
+    <section
+      id="screens"
+      class="py-20 bg-white"
+      role="region"
+      aria-label="Screens Section"
+    >
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">
           Screens From Projects
@@ -1073,7 +1138,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900 text-white">
+    <section
+      id="contact"
+      class="py-20 bg-gray-900 text-white"
+      role="region"
+      aria-label="Contact Section"
+    >
       <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold mb-8">
           Let’s Build Great Software Together
@@ -1138,6 +1208,23 @@
         selector: ".glightbox",
         loop: true, // ✅ يسمح بالتنقل بين الصور بشكل دائري
       });
+    </script>
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              laravel: "#ff2d20",
+              alpine: "#77C1D2",
+              livewire: "#fb70a9",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
   </body>
 </html>
