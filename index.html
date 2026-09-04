@@ -545,7 +545,7 @@
               :class="activeTab === 'tall' ? 'bg-laravel text-white' : 'bg-white text-gray-700'"
               class="px-6 py-3 rounded-lg font-semibold transition shadow-md"
             >
-              TALL Stack Projects
+              Web Projects
             </button>
             <button
               @click="activeTab = 'desktop'"
@@ -556,7 +556,7 @@
             </button>
           </div>
 
-          <!-- TALL Stack Projects -->
+          <!-- Web Projects -->
           <div x-show="activeTab === 'tall'" class="grid md:grid-cols-2 gap-8">
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
               <img
@@ -568,11 +568,12 @@
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3">Career AI Platform</h3>
                 <p class="text-gray-600 mb-4">
-                  A generative AI-powered web platform for personalized career
-                  guidance. Users upload their CV and specify a target job, then
-                  receive customized interview questions and four AI-generated
-                  reports analyzing technical skills, soft skills, answer
-                  quality, and CV–job alignment.
+                  A web platform for AI-powered career guidance. Users upload
+                  their CV and specify a target job to receive generated
+                  interview questions and four analysis reports covering
+                  technical skills, soft skills, answer quality, and CV–job
+                  alignment. Built with a JavaScript and Alpine.js frontend
+                  consuming an AI API.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -597,7 +598,7 @@
                   class="glightbox text-blue-600 font-semibold hover:underline"
                   data-gallery="careerAI"
                 >
-                  View Project →
+                  View Screenshots →
                 </a>
                 <a
                   href="img/CareerAI/Upload cv.png"
@@ -641,6 +642,13 @@
                   class="glightbox"
                   data-gallery="careerAI"
                 ></a>
+                <a
+                  href="img/CareerAI/CareerAI.mp4"
+                  title="Demo Video"
+                  class="glightbox"
+                  data-gallery="careerAI"
+                  data-type="video"
+                ></a>
               </div>
             </div>
 
@@ -652,14 +660,15 @@
                 loading="lazy"
               />
               <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-3">Web YemenIn</h3>
+                <h3 class="text-2xl font-semibold mb-3">YemenIn</h3>
                 <p class="text-gray-600 mb-4">
-                  A professional networking platform inspired by LinkedIn, built
-                  from scratch using Laravel and Livewire. It enables users to
-                  connect, interact, and explore job opportunities within a
-                  streamlined environment, and integrates seamlessly with
-                  <strong>CareerAI</strong> for AI-powered CV analysis and
-                  personalized career insights.
+                  A professional networking and jobs platform built from scratch
+                  with Laravel and Livewire. The system handles user
+                  authentication (including Google login), user profiles, posts
+                  and comments, a follow system, company pages, job listings,
+                  real-time chat, and notifications. An admin dashboard manages
+                  users and jobs. Integrates with
+                  <strong>CareerAI</strong> for CV analysis.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -690,7 +699,7 @@
                   class="glightbox text-blue-600 font-semibold hover:underline"
                   data-gallery="yemenIn"
                 >
-                  View Project →
+                  View Screenshots →
                 </a>
                 <a
                   href="img/YemenIn/Sign In.png"
@@ -699,8 +708,20 @@
                   data-gallery="yemenIn"
                 ></a>
                 <a
+                  href="img/YemenIn/Google.png"
+                  title="Google Login"
+                  class="glightbox"
+                  data-gallery="yemenIn"
+                ></a>
+                <a
                   href="img/YemenIn/Create Account.png"
                   title="Create Account Page"
+                  class="glightbox"
+                  data-gallery="yemenIn"
+                ></a>
+                <a
+                  href="img/YemenIn/Home.png"
+                  title="Home Feed"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
@@ -712,13 +733,19 @@
                 ></a>
                 <a
                   href="img/YemenIn/create post.png"
-                  title="Create Post Page"
+                  title="Create Post"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/create post with image.png"
                   title="Create Post with Image"
+                  class="glightbox"
+                  data-gallery="yemenIn"
+                ></a>
+                <a
+                  href="img/YemenIn/create comment.png"
+                  title="Create Comment"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
@@ -737,6 +764,18 @@
                 <a
                   href="img/YemenIn/Companies.png"
                   title="Companies Page"
+                  class="glightbox"
+                  data-gallery="yemenIn"
+                ></a>
+                <a
+                  href="img/YemenIn/Jobs.png"
+                  title="Jobs Page"
+                  class="glightbox"
+                  data-gallery="yemenIn"
+                ></a>
+                <a
+                  href="img/YemenIn/Create job.png"
+                  title="Create Job Listing"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
@@ -789,26 +828,20 @@
                   data-gallery="yemenIn"
                 ></a>
                 <a
-                  href="img/YemenIn/Jobs.png"
-                  title="Jobs Page"
-                  class="glightbox"
-                  data-gallery="yemenIn"
-                ></a>
-                <a
                   href="img/YemenIn/Dashboard home.png"
-                  title="Dashboard Home"
+                  title="Admin Dashboard"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Dashboard users.png"
-                  title="Dashboard Users Management"
+                  title="Dashboard – Users Management"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
                 <a
                   href="img/YemenIn/Dashboard jobs.png"
-                  title="Dashboard Jobs Management"
+                  title="Dashboard – Jobs Management"
                   class="glightbox"
                   data-gallery="yemenIn"
                 ></a>
@@ -824,8 +857,8 @@
               <!-- Crime Game -->
               <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <img
-                  src="img/Home.png"
-                  alt="Home Page"
+                  src="img/Crime/Home.png"
+                  alt="CrimeGame Home Screen"
                   class="w-full h-70 object-contain"
                   loading="lazy"
                 />
@@ -836,20 +869,14 @@
                   </h3>
 
                   <p class="text-gray-600 mb-4">
-                    Converted a PowerPoint-based game into a fully functional
-                    desktop application. The original game, designed by a
-                    relative, had good gameplay but was limited by PowerPoint’s
-                    constraints. Initial attempts to expand it with an
-                    Excel-based helper resulted in two separate applications
-                    with a large total size (~150MB) and persistent limitations.
-                    I redesigned the project as a single desktop application,
-                    reducing the size to 18MB, integrating previously impossible
-                    features, and structuring it using a 3-tier architecture for
-                    easier future updates. This also allowed the owner to have
-                    full control over the application for distribution or sale.
-                    Beyond programming, this project taught me valuable lessons
-                    in client communication and transforming a concept from
-                    pre-built tools into a custom-built solution from scratch.
+                    A desktop game application built with C# and .NET Framework,
+                    converting a PowerPoint-based game into a single,
+                    self-contained application. The original setup relied on two
+                    separate PowerPoint and Excel files totalling ~150MB with
+                    significant limitations. The rebuilt version runs at 18MB,
+                    integrates all features in one place, and is structured with
+                    a 3-tier architecture for maintainability and future
+                    updates.
                   </p>
 
                   <div class="flex flex-wrap gap-2 mb-4">
@@ -878,7 +905,7 @@
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="game-desktop"
                   >
-                    View Project →
+                    View Screenshots →
                   </a>
 
                   <a
@@ -1092,17 +1119,16 @@
                   </h3>
 
                   <p class="text-gray-600 mb-4">
-                    A scalable backend system for team task management built
-                    with ASP.NET Core and Clean Architecture. The platform
-                    provides secure RESTful APIs for task assignment, status
-                    tracking, JWT authentication, and event-driven
-                    notifications. Performance was optimized using stored
-                    procedures, asynchronous database operations (async/await),
-                    and efficient data access with ADO.NET to deliver a
-                    responsive and maintainable solution.
+                    A backend API for team task management built with ASP.NET
+                    Core and Clean Architecture. Provides RESTful endpoints for
+                    task assignment, status tracking, and JWT-based
+                    authentication. Data access is handled via ADO.NET with
+                    stored procedures and asynchronous database operations
+                    (async/await) to keep queries efficient and the codebase
+                    maintainable.
                   </p>
 
-                  <div class="flex flex-wrap gap-2">
+                  <div class="flex flex-wrap gap-2 mb-4">
                     <span
                       class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm"
                       >C#</span
@@ -1140,14 +1166,21 @@
                       >Git</span
                     >
                   </div>
+                  <a
+                    href="img/Taskeen.jfif"
+                    class="glightbox text-cyan-500 font-semibold hover:underline"
+                    data-gallery="taskeen"
+                  >
+                    View Screenshot →
+                  </a>
                 </div>
               </div>
 
               <!-- DVLD Project -->
               <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <img
-                  src="img/DVLDLogin.png"
-                  alt="DVLD Login"
+                  src="img/DVLD/DVLDLogin.png"
+                  alt="DVLD Login Screen"
                   class="w-full h-70 object-contain"
                   loading="lazy"
                 />
@@ -1158,12 +1191,14 @@
                   </h3>
 
                   <p class="text-gray-600 mb-4">
-                    Desktop application developed using C# and .NET Framework
-                    for managing driving licenses. The system handles issuing,
-                    renewing, replacing licenses, scheduling driving tests,
-                    managing results, and maintaining audit logs to ensure data
-                    integrity. Built with a clean 3-tier architecture to improve
-                    maintainability and scalability.
+                    A desktop application built with C# and .NET Framework for
+                    managing driving license operations. Covers license issuing,
+                    renewal, replacement, and detention. Includes scheduling and
+                    tracking of written, vision, and street tests; managing
+                    people, drivers, and users; and maintaining audit logs to
+                    preserve data integrity. Structured with a 3-tier
+                    architecture for a clean separation between UI, business
+                    logic, and data access.
                   </p>
 
                   <div class="flex flex-wrap gap-2 mb-4">
@@ -1182,14 +1217,157 @@
                   </div>
 
                   <a
-                    href="img/DVLDLogin.png"
+                    href="img/DVLD/DVLDLogin.png"
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="dvld"
                   >
-                    View Project →
+                    View Screenshots →
                   </a>
 
-                  <!-- بقية روابط معرض الصور كما هي -->
+                  <a
+                    href="img/DVLD/Manage People.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage People"
+                  ></a>
+                  <a
+                    href="img/DVLD/Add Person.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Add Person"
+                  ></a>
+                  <a
+                    href="img/DVLD/Choose Person.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Choose Person"
+                  ></a>
+                  <a
+                    href="img/DVLD/Add Local Driving License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Add Local Driving License"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Local License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Local Licenses"
+                  ></a>
+                  <a
+                    href="img/DVLD/Renew License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Renew License"
+                  ></a>
+                  <a
+                    href="img/DVLD/Replacement License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Replacement License"
+                  ></a>
+                  <a
+                    href="img/DVLD/Detain License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Detain License"
+                  ></a>
+                  <a
+                    href="img/DVLD/Release License.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Release License"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage International Licenses.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage International Licenses"
+                  ></a>
+                  <a
+                    href="img/DVLD/History Licenses.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="License History"
+                  ></a>
+                  <a
+                    href="img/DVLD/Schedule Written Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Schedule Written Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Written Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Written Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Schedule Vision Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Schedule Vision Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Vision Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Vision Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Schedule Street Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Schedule Street Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Street Test.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Street Test"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Drivers.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Drivers"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Users.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Users"
+                  ></a>
+                  <a
+                    href="img/DVLD/Add User.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Add User"
+                  ></a>
+                  <a
+                    href="img/DVLD/Show User.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Show User"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage Tests Types.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Test Types"
+                  ></a>
+                  <a
+                    href="img/DVLD/Manage App Types.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Manage Application Types"
+                  ></a>
+                  <a
+                    href="img/DVLD/Change Password.png"
+                    class="glightbox"
+                    data-gallery="dvld"
+                    title="Change Password"
+                  ></a>
                 </div>
               </div>
             </div>
