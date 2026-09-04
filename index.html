@@ -122,6 +122,11 @@
               >Home</a
             >
             <a
+              href="#about"
+              class="text-gray-700 hover:text-laravel font-medium"
+              >About</a
+            >
+            <a
               href="#skills"
               class="text-gray-700 hover:text-laravel font-medium"
               >Skills</a
@@ -148,6 +153,9 @@
         <div x-show="open" class="md:hidden py-4 border-t">
           <a href="#home" class="block py-2 text-gray-700 hover:text-laravel"
             >Home</a
+          >
+          <a href="#about" class="block py-2 text-gray-700 hover:text-laravel"
+            >About</a
           >
           <a href="#skills" class="block py-2 text-gray-700 hover:text-laravel"
             >Skills</a
@@ -230,6 +238,101 @@
             >
               Get In Touch
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 bg-gray-50"
+      role="region"
+      aria-label="About Section"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <!-- Who I am -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              Who I Am
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              I am a Full-Stack Developer with a strong focus on backend
+              development. I build web applications and backend systems using
+              Laravel and .NET — designing the logic, data layer, and APIs that
+              make applications work reliably.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              While my primary strength is on the server side, I work across the
+              full stack and understand how frontend and backend fit together to
+              deliver a complete product.
+            </p>
+          </div>
+
+          <!-- What I build -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+              What I Build
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              I build web applications backed by relational databases, REST
+              APIs, and structured business logic. I work with authentication
+              and authorization systems, database transactions, and the kind of
+              data-driven features that form the core of most real-world
+              applications.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              I pay attention to how systems are designed — keeping code
+              maintainable, keeping data consistent, and building solutions that
+              can grow as requirements change.
+            </p>
+          </div>
+        </div>
+
+        <!-- Focus areas -->
+        <div class="grid md:grid-cols-3 gap-6 mt-14">
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-server text-red-500 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">Backend Systems</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              REST APIs, business logic, and server-side application structure
+              with Laravel and .NET.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-database text-yellow-500 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Databases &amp; SQL
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Relational database design, complex queries, transactions, and
+              data integrity with SQL Server and MySQL.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-lock text-blue-500 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">Auth &amp; Design</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Authentication, authorization, and software design patterns that
+              keep applications secure and maintainable.
+            </p>
           </div>
         </div>
       </div>
