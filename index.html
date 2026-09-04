@@ -558,6 +558,74 @@
 
           <!-- Web Projects -->
           <div x-show="activeTab === 'tall'" class="grid md:grid-cols-2 gap-8">
+            <!-- E-commerce Admin Dashboard -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div
+                class="w-full h-48 bg-gray-100 flex flex-col items-center justify-center gap-2"
+              >
+                <i class="fas fa-store text-gray-300 text-5xl"></i>
+                <span class="text-gray-400 text-sm">No preview available</span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold mb-3">
+                  E-commerce Admin Dashboard
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  An e-commerce administration system built with Laravel,
+                  Livewire, and Filament. Structured as a modular monolith using
+                  the Actions pattern and Dependency Injection, with role and
+                  permission management through Spatie Permission and Laravel
+                  Policies.
+                </p>
+                <p class="text-gray-600 mb-4">
+                  Covers product management with variants and a supplier
+                  approval workflow that separates approval status from
+                  active/inactive state — supplier-proposed changes do not
+                  directly overwrite approved data. The inventory module tracks
+                  stock quantities, reserved quantities, and available balances.
+                  Inventory movements are recorded as an append-only audit log.
+                  Balance mutations are executed within database transactions
+                  using pessimistic locking to maintain consistency and enforce
+                  invariants such as preventing negative stock or reserved
+                  quantities exceeding stock.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-red-100 text-red-700 px-3 py-1 rounded text-sm"
+                    >Laravel</span
+                  >
+                  <span
+                    class="bg-pink-100 text-pink-700 px-3 py-1 rounded text-sm"
+                    >Livewire</span
+                  >
+                  <span
+                    class="bg-amber-100 text-amber-700 px-3 py-1 rounded text-sm"
+                    >Filament</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm"
+                    >PHP</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm"
+                    >MySQL</span
+                  >
+                  <span
+                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded text-sm"
+                    >Spatie Permission</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-700 px-3 py-1 rounded text-sm"
+                    >Testing</span
+                  >
+                  <span
+                    class="bg-teal-100 text-teal-700 px-3 py-1 rounded text-sm"
+                    >Modular Monolith</span
+                  >
+                </div>
+              </div>
+            </div>
+
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
               <img
                 src="img/CareerAIHome.png"
@@ -854,102 +922,75 @@
             class="grid md:grid-cols-2 gap-8"
           >
             <div class="space-y-8">
-              <!-- Crime Game -->
+              <!-- Taskeen Project -->
               <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <img
-                  src="img/Crime/Home.png"
-                  alt="CrimeGame Home Screen"
+                  src="img/Taskeen.jfif"
+                  alt="Taskeen Task Management System"
                   class="w-full h-70 object-contain"
                   loading="lazy"
                 />
 
                 <div class="p-6">
                   <h3 class="text-2xl font-semibold mb-3">
-                    CrimeGame – Desktop Game Application
+                    Taskeen – Task Management System (Backend API)
                   </h3>
 
                   <p class="text-gray-600 mb-4">
-                    A desktop game application built with C# and .NET Framework,
-                    converting a PowerPoint-based game into a single,
-                    self-contained application. The original setup relied on two
-                    separate PowerPoint and Excel files totalling ~150MB with
-                    significant limitations. The rebuilt version runs at 18MB,
-                    integrates all features in one place, and is structured with
-                    a 3-tier architecture for maintainability and future
-                    updates.
+                    A backend API for team task management built with ASP.NET
+                    Core and Clean Architecture. Provides RESTful endpoints for
+                    task assignment, status tracking, and JWT-based
+                    authentication. Data access is handled via ADO.NET with
+                    stored procedures and asynchronous database operations
+                    (async/await) to keep queries efficient and the codebase
+                    maintainable.
                   </p>
 
                   <div class="flex flex-wrap gap-2 mb-4">
                     <span
                       class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm"
+                      >C#</span
                     >
-                      C#
-                    </span>
-
                     <span
                       class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm"
+                      >ASP.NET Core</span
                     >
-                      .NET Framework
-                    </span>
-
+                    <span
+                      class="bg-violet-100 text-violet-700 px-3 py-1 rounded text-sm"
+                      >.NET Core</span
+                    >
                     <span
                       class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm"
+                      >SQL Server</span
                     >
-                      3-Tier Architecture
-                    </span>
+                    <span
+                      class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm"
+                      >ADO.NET</span
+                    >
+                    <span
+                      class="bg-red-100 text-red-700 px-3 py-1 rounded text-sm"
+                      >RESTful APIs</span
+                    >
+                    <span
+                      class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded text-sm"
+                      >JWT</span
+                    >
+                    <span
+                      class="bg-teal-100 text-teal-700 px-3 py-1 rounded text-sm"
+                      >Clean Architecture</span
+                    >
+                    <span
+                      class="bg-orange-100 text-orange-700 px-3 py-1 rounded text-sm"
+                      >Git</span
+                    >
                   </div>
-
-                  <!-- Gallery links -->
                   <a
-                    href="img/Crime/Home.png"
+                    href="img/Taskeen.jfif"
                     class="glightbox text-cyan-500 font-semibold hover:underline"
-                    data-gallery="game-desktop"
+                    data-gallery="taskeen"
                   >
-                    View Screenshots →
+                    View Screenshot →
                   </a>
-
-                  <a
-                    href="img/Crime/Instructions.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Instructions"
-                  ></a>
-                  <a
-                    href="img/Crime/Players.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Players"
-                  ></a>
-                  <a
-                    href="img/Crime/Crime.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Crime"
-                  ></a>
-                  <a
-                    href="img/Crime/Helper Cards.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Helper Cards"
-                  ></a>
-                  <a
-                    href="img/Crime/Game.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Game"
-                  ></a>
-                  <a
-                    href="img/Crime/Chosen Game.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Chosen Game"
-                  ></a>
-                  <a
-                    href="img/Crime/Result.png"
-                    class="glightbox"
-                    data-gallery="game-desktop"
-                    title="Result"
-                  ></a>
                 </div>
               </div>
 
@@ -1104,79 +1145,8 @@
               </div>
             </div>
             <div class="space-y-8">
-              <!-- Taskeen Project -->
-              <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <img
-                  src="img/Taskeen.jfif"
-                  alt="Taskeen Task Management System"
-                  class="w-full h-70 object-contain"
-                  loading="lazy"
-                />
-
-                <div class="p-6">
-                  <h3 class="text-2xl font-semibold mb-3">
-                    Taskeen – Task Management System (Backend API)
-                  </h3>
-
-                  <p class="text-gray-600 mb-4">
-                    A backend API for team task management built with ASP.NET
-                    Core and Clean Architecture. Provides RESTful endpoints for
-                    task assignment, status tracking, and JWT-based
-                    authentication. Data access is handled via ADO.NET with
-                    stored procedures and asynchronous database operations
-                    (async/await) to keep queries efficient and the codebase
-                    maintainable.
-                  </p>
-
-                  <div class="flex flex-wrap gap-2 mb-4">
-                    <span
-                      class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm"
-                      >C#</span
-                    >
-                    <span
-                      class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm"
-                      >ASP.NET Core</span
-                    >
-                    <span
-                      class="bg-violet-100 text-violet-700 px-3 py-1 rounded text-sm"
-                      >.NET Core</span
-                    >
-                    <span
-                      class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm"
-                      >SQL Server</span
-                    >
-                    <span
-                      class="bg-green-100 text-green-700 px-3 py-1 rounded text-sm"
-                      >ADO.NET</span
-                    >
-                    <span
-                      class="bg-red-100 text-red-700 px-3 py-1 rounded text-sm"
-                      >RESTful APIs</span
-                    >
-                    <span
-                      class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded text-sm"
-                      >JWT</span
-                    >
-                    <span
-                      class="bg-teal-100 text-teal-700 px-3 py-1 rounded text-sm"
-                      >Clean Architecture</span
-                    >
-                    <span
-                      class="bg-orange-100 text-orange-700 px-3 py-1 rounded text-sm"
-                      >Git</span
-                    >
-                  </div>
-                  <a
-                    href="img/Taskeen.jfif"
-                    class="glightbox text-cyan-500 font-semibold hover:underline"
-                    data-gallery="taskeen"
-                  >
-                    View Screenshot →
-                  </a>
-                </div>
-              </div>
-
               <!-- DVLD Project -->
+
               <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <img
                   src="img/DVLD/DVLDLogin.png"
@@ -1367,6 +1337,104 @@
                     class="glightbox"
                     data-gallery="dvld"
                     title="Change Password"
+                  ></a>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <img
+                  src="img/Crime/Home.png"
+                  alt="CrimeGame Home Screen"
+                  class="w-full h-70 object-contain"
+                  loading="lazy"
+                />
+
+                <div class="p-6">
+                  <h3 class="text-2xl font-semibold mb-3">
+                    CrimeGame – Desktop Game Application
+                  </h3>
+
+                  <p class="text-gray-600 mb-4">
+                    A desktop game application built with C# and .NET Framework,
+                    converting a PowerPoint-based game into a single,
+                    self-contained application. The original setup relied on two
+                    separate PowerPoint and Excel files totalling ~150MB with
+                    significant limitations. The rebuilt version runs at 18MB,
+                    integrates all features in one place, and is structured with
+                    a 3-tier architecture for maintainability and future
+                    updates.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span
+                      class="bg-blue-100 text-blue-700 px-3 py-1 rounded text-sm"
+                    >
+                      C#
+                    </span>
+
+                    <span
+                      class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded text-sm"
+                    >
+                      .NET Framework
+                    </span>
+
+                    <span
+                      class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm"
+                    >
+                      3-Tier Architecture
+                    </span>
+                  </div>
+
+                  <!-- Gallery links -->
+                  <a
+                    href="img/Crime/Home.png"
+                    class="glightbox text-cyan-500 font-semibold hover:underline"
+                    data-gallery="game-desktop"
+                  >
+                    View Screenshots →
+                  </a>
+
+                  <a
+                    href="img/Crime/Instructions.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Instructions"
+                  ></a>
+                  <a
+                    href="img/Crime/Players.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Players"
+                  ></a>
+                  <a
+                    href="img/Crime/Crime.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Crime"
+                  ></a>
+                  <a
+                    href="img/Crime/Helper Cards.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Helper Cards"
+                  ></a>
+                  <a
+                    href="img/Crime/Game.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Game"
+                  ></a>
+                  <a
+                    href="img/Crime/Chosen Game.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Chosen Game"
+                  ></a>
+                  <a
+                    href="img/Crime/Result.png"
+                    class="glightbox"
+                    data-gallery="game-desktop"
+                    title="Result"
                   ></a>
                 </div>
               </div>
