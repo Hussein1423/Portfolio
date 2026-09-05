@@ -137,6 +137,11 @@
               >Projects</a
             >
             <a
+              href="#engineering"
+              class="text-gray-700 hover:text-laravel font-medium"
+              >Engineering</a
+            >
+            <a
               href="#screens"
               class="text-gray-700 hover:text-laravel font-medium"
               >Screens</a
@@ -164,6 +169,9 @@
             href="#projects"
             class="block py-2 text-gray-700 hover:text-laravel"
             >Projects</a
+          >
+          <a href="#engineering" class="block py-2 text-gray-700 hover:text-laravel"
+            >Engineering</a
           >
           <a href="#screens" class="block py-2 text-gray-700 hover:text-laravel"
             >Screens</a
@@ -1439,6 +1447,192 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- Architecture & Engineering Section -->
+    <section
+      id="engineering"
+      class="py-20 bg-gray-50"
+      role="region"
+      aria-label="Architecture and Engineering Section"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-6">
+          Architecture &amp; Engineering
+        </h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+          Beyond building features, I focus on how a system is organized, how
+          its data stays consistent, and how it can be extended as requirements
+          grow. The following examples come from actual projects.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Modular Monolith -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-cubes text-teal-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Modular Structure
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              The E-commerce Admin Dashboard and the Laravel Modular Monolith
+              project are organized as modular monoliths, grouping related
+              business logic into isolated modules. This keeps each domain
+              self-contained while sharing a single deployable application.
+            </p>
+          </div>
+
+          <!-- Actions Pattern & Dependency Injection -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-sitemap text-indigo-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Actions Pattern &amp; Dependency Injection
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Business operations are expressed as single-responsibility action
+              classes, injected where needed. This makes each action testable in
+              isolation and keeps controllers and services focused on
+              coordination rather than business logic.
+            </p>
+          </div>
+
+          <!-- Policies & Authorization -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-shield-alt text-red-500 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Policies &amp; Authorization
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Authorization is handled through Laravel Policies and Spatie
+              Permission, separating permission logic from business logic.
+              Resources are scoped to their owner, and role-based access
+              controls what each type of user can read or modify.
+            </p>
+          </div>
+
+          <!-- Inventory Transactions & Locking -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-lock text-yellow-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Inventory Consistency
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              In the E-commerce Admin Dashboard, inventory balance changes are
+              executed inside database transactions with pessimistic locking.
+              The system enforces invariants — stock cannot go negative, reserved
+              quantity cannot exceed stock — before any mutation is committed.
+            </p>
+          </div>
+
+          <!-- Audit History -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-history text-orange-500 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Audit History
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Inventory movements are recorded as an append-only log, tracking
+              the reason, source type, and source ID for each change. This
+              provides a queryable audit trail of every balance mutation without
+              modifying historical records.
+            </p>
+          </div>
+
+          <!-- Supplier Approval Workflow -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-tasks text-purple-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Approval Workflows &amp; Validation
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Supplier products go through an approval workflow that separates
+              approval status from active/inactive state. Supplier-proposed
+              changes are staged and reviewed before overwriting approved data.
+              Business rules are enforced through Form Requests, keeping
+              validation close to the action that needs it.
+            </p>
+          </div>
+
+          <!-- Clean Architecture / .NET -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-layer-group text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Layered Architecture (.NET)
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              The Taskeen backend API is structured with Clean Architecture,
+              clearly separating API, application, and data access layers.
+              The DVLD and Library desktop systems use a 3-tier architecture
+              to isolate UI, business rules, and database access.
+            </p>
+          </div>
+
+          <!-- Testing -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-vial text-green-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Automated Testing
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              The Laravel Modular Monolith and E-commerce Admin Dashboard
+              include automated tests. Writing tests alongside business logic
+              provides confidence that complex workflows — such as inventory
+              mutations and approval transitions — behave correctly after
+              changes.
+            </p>
+          </div>
+
+          <!-- Separation of Concerns -->
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-project-diagram text-gray-600 text-xl"></i>
+            </div>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Maintainability
+            </h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Across projects, the goal is to write code that can be changed
+              without unintended side effects. Separation of concerns,
+              single-responsibility actions, and clear module boundaries make
+              it easier to add features or modify behavior as requirements
+              evolve.
+            </p>
           </div>
         </div>
       </div>
