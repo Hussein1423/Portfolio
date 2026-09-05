@@ -142,11 +142,6 @@
               >Engineering</a
             >
             <a
-              href="#screens"
-              class="text-gray-700 hover:text-laravel font-medium"
-              >Screens</a
-            >
-            <a
               href="#contact"
               class="text-gray-700 hover:text-laravel font-medium"
               >Contact</a
@@ -170,11 +165,10 @@
             class="block py-2 text-gray-700 hover:text-laravel"
             >Projects</a
           >
-          <a href="#engineering" class="block py-2 text-gray-700 hover:text-laravel"
+          <a
+            href="#engineering"
+            class="block py-2 text-gray-700 hover:text-laravel"
             >Engineering</a
-          >
-          <a href="#screens" class="block py-2 text-gray-700 hover:text-laravel"
-            >Screens</a
           >
           <a href="#contact" class="block py-2 text-gray-700 hover:text-laravel"
             >Contact</a
@@ -1450,7 +1444,7 @@
           </div>
         </div>
       </div>
-     </section>
+    </section>
 
     <!-- Architecture & Engineering Section -->
     <section
@@ -1477,9 +1471,7 @@
             >
               <i class="fas fa-cubes text-teal-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
-              Modular Structure
-            </h4>
+            <h4 class="font-semibold text-gray-800 mb-2">Modular Structure</h4>
             <p class="text-gray-600 text-sm leading-relaxed">
               The E-commerce Admin Dashboard and the Laravel Modular Monolith
               project are organized as modular monoliths, grouping related
@@ -1537,8 +1529,9 @@
             <p class="text-gray-600 text-sm leading-relaxed">
               In the E-commerce Admin Dashboard, inventory balance changes are
               executed inside database transactions with pessimistic locking.
-              The system enforces invariants — stock cannot go negative, reserved
-              quantity cannot exceed stock — before any mutation is committed.
+              The system enforces invariants — stock cannot go negative,
+              reserved quantity cannot exceed stock — before any mutation is
+              committed.
             </p>
           </div>
 
@@ -1549,9 +1542,7 @@
             >
               <i class="fas fa-history text-orange-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
-              Audit History
-            </h4>
+            <h4 class="font-semibold text-gray-800 mb-2">Audit History</h4>
             <p class="text-gray-600 text-sm leading-relaxed">
               Inventory movements are recorded as an append-only log, tracking
               the reason, source type, and source ID for each change. This
@@ -1591,9 +1582,9 @@
             </h4>
             <p class="text-gray-600 text-sm leading-relaxed">
               The Taskeen backend API is structured with Clean Architecture,
-              clearly separating API, application, and data access layers.
-              The DVLD and Library desktop systems use a 3-tier architecture
-              to isolate UI, business rules, and database access.
+              clearly separating API, application, and data access layers. The
+              DVLD and Library desktop systems use a 3-tier architecture to
+              isolate UI, business rules, and database access.
             </p>
           </div>
 
@@ -1604,9 +1595,7 @@
             >
               <i class="fas fa-vial text-green-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
-              Automated Testing
-            </h4>
+            <h4 class="font-semibold text-gray-800 mb-2">Automated Testing</h4>
             <p class="text-gray-600 text-sm leading-relaxed">
               The Laravel Modular Monolith and E-commerce Admin Dashboard
               include automated tests. Writing tests alongside business logic
@@ -1623,128 +1612,14 @@
             >
               <i class="fas fa-project-diagram text-gray-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
-              Maintainability
-            </h4>
+            <h4 class="font-semibold text-gray-800 mb-2">Maintainability</h4>
             <p class="text-gray-600 text-sm leading-relaxed">
               Across projects, the goal is to write code that can be changed
               without unintended side effects. Separation of concerns,
-              single-responsibility actions, and clear module boundaries make
-              it easier to add features or modify behavior as requirements
-              evolve.
+              single-responsibility actions, and clear module boundaries make it
+              easier to add features or modify behavior as requirements evolve.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="screens"
-      class="py-20 bg-white"
-      role="region"
-      aria-label="Screens Section"
-    >
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">
-          Screens From Projects
-        </h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img
-            src="img/eyetest.jpg"
-            alt="Eye Test Application"
-            title="Screen From DVLD Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/manageusers.jpg"
-            alt="Manage Users Page"
-            title="Screen From DVLD Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/Scdeaulwrittingtest.jpg"
-            alt="Schedule Writing Test Page"
-            title="Screen From DVLD Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/AddBook.jpg"
-            alt="Add Book In The System"
-            title="Screen From Library Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/ShowUser.jpg"
-            alt="Show Users Page"
-            title="Screen From Library Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/RequestBook.jpg"
-            alt="Request A Book Page"
-            title="Screen From Library Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/uploadCV.jpg"
-            alt="Upload CV Page"
-            title="Screen From CareerAI Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/skill.jpg"
-            alt="Skills Report Page"
-            title="Screen From CareerAI Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/ChooseTest.jpg"
-            alt="Choose Test Page"
-            title="Screen From CareerAI Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/profile.jpg"
-            alt="Profile Page"
-            title="Screen From YemenIn Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/postpage.jpg"
-            alt="Post Page"
-            title="Screen From YemenIn Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
-
-          <img
-            src="img/message.jpg"
-            alt="Message Page"
-            title="Screen From YemenIn Project"
-            class="w-full aspect-square object-cover rounded-lg shadow-md hover:shadow-xl transition cursor-pointer"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>
