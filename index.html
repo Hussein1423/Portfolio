@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth" role="document">
+<html lang="en" id="html-root" class="scroll-smooth" role="document">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -133,62 +133,98 @@
           </div>
 
           <!-- Desktop Menu -->
-          <div class="hidden md:flex space-x-8">
-            <a href="#home" class="text-gray-700 hover:text-laravel font-medium"
+          <div class="hidden md:flex gap-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_home"
               >Home</a
             >
             <a
               href="#about"
               class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_about"
               >About</a
             >
             <a
               href="#skills"
               class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_skills"
               >Skills</a
             >
             <a
               href="#projects"
               class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_projects"
               >Projects</a
             >
             <a
               href="#engineering"
               class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_eng"
               >Engineering</a
             >
             <a
               href="#contact"
               class="text-gray-700 hover:text-laravel font-medium"
+              data-i18n="nav_contact"
               >Contact</a
             >
+            <button
+              onclick="toggleLang()"
+              class="text-gray-700 hover:text-laravel font-bold"
+              id="lang-switcher-desktop"
+            >
+              العربية
+            </button>
           </div>
         </div>
 
         <!-- Mobile Menu -->
         <div x-show="open" class="md:hidden py-4 border-t">
-          <a href="#home" class="block py-2 text-gray-700 hover:text-laravel"
+          <a
+            href="#home"
+            class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_home"
             >Home</a
           >
-          <a href="#about" class="block py-2 text-gray-700 hover:text-laravel"
+          <a
+            href="#about"
+            class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_about"
             >About</a
           >
-          <a href="#skills" class="block py-2 text-gray-700 hover:text-laravel"
+          <a
+            href="#skills"
+            class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_skills"
             >Skills</a
           >
           <a
             href="#projects"
             class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_projects"
             >Projects</a
           >
           <a
             href="#engineering"
             class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_eng"
             >Engineering</a
           >
-          <a href="#contact" class="block py-2 text-gray-700 hover:text-laravel"
+          <a
+            href="#contact"
+            class="block py-2 text-gray-700 hover:text-laravel"
+            data-i18n="nav_contact"
             >Contact</a
           >
+          <button
+            onclick="toggleLang()"
+            class="block py-2 text-gray-700 hover:text-laravel font-bold"
+            id="lang-switcher-mobile"
+          >
+            العربية
+          </button>
         </div>
       </div>
     </nav>
@@ -209,11 +245,14 @@
           />
 
           <h1 class="text-5xl md:text-6xl font-bold mb-6">Hussein Qaid</h1>
-          <p class="text-xl md:text-2xl mb-8 opacity-90">
+          <p class="text-xl md:text-2xl mb-8 opacity-90" data-i18n="hero_role">
             Full-Stack Developer focused on Backend
           </p>
 
-          <p class="text-lg max-w-2xl mx-auto mb-8 opacity-80">
+          <p
+            class="text-lg max-w-2xl mx-auto mb-8 opacity-80"
+            data-i18n="hero_desc"
+          >
             Building robust backend systems, RESTful APIs, and maintainable web
             applications — with Laravel, .NET, and SQL as core tools, and a
             solid understanding of the full stack from database to frontend.
@@ -248,13 +287,13 @@
               href="#projects"
               class="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition"
             >
-              View My Work
+              <span data-i18n="hero_btn_work">View My Work</span>
             </a>
             <a
               href="#contact"
               class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition"
             >
-              Get In Touch
+              <span data-i18n="hero_btn_touch">Get In Touch</span>
             </a>
             <a
               href="Fullstack Developer Hussein Qaid.pdf"
@@ -265,7 +304,7 @@
               class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition flex items-center gap-2"
             >
               <i class="fas fa-download"></i>
-              Download Resume
+              <span data-i18n="hero_btn_resume">Download Resume</span>
             </a>
           </div>
         </div>
@@ -280,19 +319,29 @@
       aria-label="About Section"
     >
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+        <h2
+          class="text-4xl font-bold text-center mb-16"
+          data-i18n="about_title"
+        >
+          About Me
+        </h2>
 
         <div class="grid md:grid-cols-2 gap-12 items-start">
           <!-- Who I am -->
           <div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Who I Am</h3>
-            <p class="text-gray-600 leading-relaxed mb-6">
+            <h3
+              class="text-2xl font-semibold mb-4 text-gray-800"
+              data-i18n="about_who"
+            >
+              Who I Am
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6" data-i18n="about_p1">
               I am a Full-Stack Developer with a strong focus on backend
               development. I build web applications and backend systems using
               Laravel and .NET — designing the logic, data layer, and APIs that
               make applications work reliably.
             </p>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed" data-i18n="about_p2">
               While my primary strength is on the server side, I work across the
               full stack and understand how frontend and backend fit together to
               deliver a complete product.
@@ -301,17 +350,20 @@
 
           <!-- What I build -->
           <div>
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+            <h3
+              class="text-2xl font-semibold mb-4 text-gray-800"
+              data-i18n="about_what"
+            >
               What I Build
             </h3>
-            <p class="text-gray-600 leading-relaxed mb-6">
+            <p class="text-gray-600 leading-relaxed mb-6" data-i18n="about_p3">
               I build web applications backed by relational databases, REST
               APIs, and structured business logic. I work with authentication
               and authorization systems, database transactions, and the kind of
               data-driven features that form the core of most real-world
               applications.
             </p>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed" data-i18n="about_p4">
               I pay attention to how systems are designed — keeping code
               maintainable, keeping data consistent, and building solutions that
               can grow as requirements change.
@@ -327,8 +379,13 @@
             >
               <i class="fas fa-server text-red-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Backend Systems</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="about_f1_t">
+              Backend Systems
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="about_f1_d"
+            >
               REST APIs, business logic, and server-side application structure
               with Laravel and .NET.
             </p>
@@ -340,10 +397,13 @@
             >
               <i class="fas fa-database text-yellow-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="about_f2_t">
               Databases &amp; SQL
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="about_f2_d"
+            >
               Relational database design, complex queries, transactions, and
               data integrity with SQL Server and MySQL.
             </p>
@@ -355,8 +415,13 @@
             >
               <i class="fas fa-lock text-blue-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Auth &amp; Design</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="about_f3_t">
+              Auth &amp; Design
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="about_f3_d"
+            >
               Authentication, authorization, and software design patterns that
               keep applications secure and maintainable.
             </p>
@@ -373,7 +438,12 @@
       aria-label="Skills Section"
     >
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">Skills</h2>
+        <h2
+          class="text-4xl font-bold text-center mb-16"
+          data-i18n="skills_title"
+        >
+          Skills
+        </h2>
 
         <!-- Row 1: Backend + Databases -->
         <div class="grid md:grid-cols-2 gap-8 mb-8">
@@ -390,7 +460,12 @@
             >
               <i class="fab fa-laravel text-red-500 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-4">Backend</h3>
+            <h3
+              class="text-2xl font-semibold text-center mb-4"
+              data-i18n="skills_backend"
+            >
+              Backend
+            </h3>
             <ul class="text-gray-600 space-y-3 text-center">
               <li>Laravel</li>
               <li>PHP</li>
@@ -416,13 +491,22 @@
             >
               <i class="fas fa-database text-yellow-400 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-4">Databases</h3>
+            <h3
+              class="text-2xl font-semibold text-center mb-4"
+              data-i18n="skills_databases"
+            >
+              Databases
+            </h3>
             <ul class="text-gray-600 space-y-3 text-center">
               <li>MySQL</li>
               <li>SQL Server</li>
-              <li>Database Design</li>
-              <li>Transactions &amp; Data Integrity</li>
-              <li>Indexing &amp; Stored Procedures</li>
+              <li data-i18n="skill_db_design">Database Design</li>
+              <li data-i18n="skill_db_trans">
+                Transactions &amp; Data Integrity
+              </li>
+              <li data-i18n="skill_db_index">
+                Indexing &amp; Stored Procedures
+              </li>
               <li>ADO.NET</li>
               <li>ORMs</li>
             </ul>
@@ -444,16 +528,19 @@
             >
               <i class="fas fa-layer-group text-teal-500 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-4">
+            <h3
+              class="text-2xl font-semibold text-center mb-4"
+              data-i18n="skills_arch"
+            >
               Architecture &amp; Engineering
             </h3>
             <ul class="text-gray-600 space-y-3 text-center">
-              <li>Modular Monolith</li>
-              <li>3-Tier Architecture</li>
-              <li>MVC Design Pattern</li>
-              <li>Object-Oriented Programming</li>
-              <li>Role-Based Authorization</li>
-              <li>Monolithic Architecture</li>
+              <li data-i18n="skill_arch_mod">Modular Monolith</li>
+              <li data-i18n="skill_arch_3t">3-Tier Architecture</li>
+              <li data-i18n="skill_arch_mvc">MVC Design Pattern</li>
+              <li data-i18n="skill_arch_oop">Object-Oriented Programming</li>
+              <li data-i18n="skill_arch_role">Role-Based Authorization</li>
+              <li data-i18n="skill_arch_mono">Monolithic Architecture</li>
             </ul>
           </div>
 
@@ -470,7 +557,12 @@
             >
               <i class="fas fa-code text-blue-400 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-4">Frontend</h3>
+            <h3
+              class="text-2xl font-semibold text-center mb-4"
+              data-i18n="skills_frontend"
+            >
+              Frontend
+            </h3>
             <ul class="text-gray-600 space-y-3 text-center">
               <li>HTML &amp; CSS</li>
               <li>JavaScript</li>
@@ -496,7 +588,12 @@
             >
               <i class="fas fa-tools text-gray-500 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-4">Tools</h3>
+            <h3
+              class="text-2xl font-semibold text-center mb-4"
+              data-i18n="skills_tools"
+            >
+              Tools
+            </h3>
             <ul class="text-gray-600 space-y-3 text-center">
               <li>Git & GitHub</li>
               <li>Swagger</li>
@@ -517,10 +614,16 @@
             >
               <i class="fas fa-book-open text-indigo-400 text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-center mb-2">
+            <h3
+              class="text-2xl font-semibold text-center mb-2"
+              data-i18n="skills_learning"
+            >
               Currently Learning
             </h3>
-            <p class="text-gray-400 text-sm text-center mb-4">
+            <p
+              class="text-gray-400 text-sm text-center mb-4"
+              data-i18n="skills_learning_desc"
+            >
               Technologies I am actively exploring
             </p>
             <ul class="text-gray-500 space-y-3 text-center">
@@ -543,14 +646,19 @@
           >
             <i class="fas fa-user-check text-green-500 text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-semibold text-center mb-4">Soft Skills</h3>
+          <h3
+            class="text-2xl font-semibold text-center mb-4"
+            data-i18n="skills_soft"
+          >
+            Soft Skills
+          </h3>
           <div class="grid sm:grid-cols-3 gap-3 text-gray-600 text-center">
-            <span>Problem Solving</span>
-            <span>Attention to Detail</span>
-            <span>Critical Thinking</span>
-            <span>Continuous Learning</span>
-            <span>Adaptability</span>
-            <span>Communication</span>
+            <span data-i18n="skill_soft_1">Problem Solving</span>
+            <span data-i18n="skill_soft_2">Attention to Detail</span>
+            <span data-i18n="skill_soft_3">Critical Thinking</span>
+            <span data-i18n="skill_soft_4">Continuous Learning</span>
+            <span data-i18n="skill_soft_5">Adaptability</span>
+            <span data-i18n="skill_soft_6">Communication</span>
           </div>
         </div>
       </div>
@@ -564,7 +672,9 @@
       aria-label="Projects Section"
     >
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">Featured Projects</h2>
+        <h2 class="text-4xl font-bold text-center mb-16" data-i18n="proj_title">
+          Featured Projects
+        </h2>
 
         <div x-data="{ activeTab: 'tall' }" class="mb-12">
           <!-- Tab Buttons -->
@@ -574,14 +684,14 @@
               :class="activeTab === 'tall' ? 'bg-laravel text-white' : 'bg-white text-gray-700'"
               class="px-6 py-3 rounded-lg font-semibold transition shadow-md"
             >
-              Web Projects
+              <span data-i18n="proj_tab_web">Web Projects</span>
             </button>
             <button
               @click="activeTab = 'desktop'"
               :class="activeTab === 'desktop' ? 'bg-purple-500 text-white' : 'bg-white text-gray-700'"
               class="px-6 py-3 rounded-lg font-semibold transition shadow-md"
             >
-              Desktop Projects
+              <span data-i18n="proj_tab_desktop">Desktop Projects</span>
             </button>
           </div>
 
@@ -593,20 +703,22 @@
                 class="w-full h-48 bg-gray-100 flex flex-col items-center justify-center gap-2"
               >
                 <i class="fas fa-store text-gray-300 text-5xl"></i>
-                <span class="text-gray-400 text-sm">No preview available</span>
+                <span class="text-gray-400 text-sm" data-i18n="proj_no_prev"
+                  >No preview available</span
+                >
               </div>
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3">
                   E-commerce Admin Dashboard
                 </h3>
-                <p class="text-gray-600 mb-4">
+                <p class="text-gray-600 mb-4" data-i18n="proj_ecomm_p1">
                   An e-commerce administration system built with Laravel,
                   Livewire, and Filament. Structured as a modular monolith using
                   the Actions pattern and Dependency Injection, with role and
                   permission management through Spatie Permission and Laravel
                   Policies.
                 </p>
-                <p class="text-gray-600 mb-4">
+                <p class="text-gray-600 mb-4" data-i18n="proj_ecomm_p2">
                   Covers product management with variants and a supplier
                   approval workflow that separates approval status from
                   active/inactive state — supplier-proposed changes do not
@@ -664,7 +776,7 @@
               />
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3">Career AI Platform</h3>
-                <p class="text-gray-600 mb-4">
+                <p class="text-gray-600 mb-4" data-i18n="proj_career_p">
                   A web platform for AI-powered career guidance. Users upload
                   their CV and specify a target job to receive generated
                   interview questions and four analysis reports covering
@@ -695,7 +807,7 @@
                   class="glightbox text-blue-600 font-semibold hover:underline"
                   data-gallery="careerAI"
                 >
-                  View Screenshots →
+                  <span data-i18n="proj_view_ss">View Screenshots →</span>
                 </a>
                 <a
                   href="img/CareerAI/Upload cv.png"
@@ -758,14 +870,14 @@
               />
               <div class="p-6">
                 <h3 class="text-2xl font-semibold mb-3">YemenIn</h3>
-                <p class="text-gray-600 mb-4">
+                <p class="text-gray-600 mb-4" data-i18n="proj_yemenin_p">
                   A professional networking and jobs platform built from scratch
                   with Laravel and Livewire. The system handles user
                   authentication (including Google login), user profiles, posts
                   and comments, a follow system, company pages, job listings,
                   real-time chat, and notifications. An admin dashboard manages
-                  users and jobs. Integrates with
-                  <strong>CareerAI</strong> for CV analysis.
+                  users and jobs. Integrates with <strong>CareerAI</strong> for
+                  CV analysis.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span
@@ -796,7 +908,7 @@
                   class="glightbox text-blue-600 font-semibold hover:underline"
                   data-gallery="yemenIn"
                 >
-                  View Screenshots →
+                  <span data-i18n="proj_view_ss">View Screenshots →</span>
                 </a>
                 <a
                   href="img/YemenIn/Sign In.png"
@@ -961,11 +1073,14 @@
                 />
 
                 <div class="p-6">
-                  <h3 class="text-2xl font-semibold mb-3">
+                  <h3
+                    class="text-2xl font-semibold mb-3"
+                    data-i18n="proj_taskeen_t"
+                  >
                     Taskeen – Task Management System (Backend API)
                   </h3>
 
-                  <p class="text-gray-600 mb-4">
+                  <p class="text-gray-600 mb-4" data-i18n="proj_taskeen_p">
                     A backend API for team task management built with ASP.NET
                     Core and Clean Architecture. Provides RESTful endpoints for
                     task assignment, status tracking, and JWT-based
@@ -1018,7 +1133,9 @@
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="taskeen"
                   >
-                    View Screenshot →
+                    <span data-i18n="proj_view_ss_single"
+                      >View Screenshot →</span
+                    >
                   </a>
                 </div>
               </div>
@@ -1033,11 +1150,14 @@
                 />
 
                 <div class="p-6">
-                  <h3 class="text-2xl font-semibold mb-3">
+                  <h3
+                    class="text-2xl font-semibold mb-3"
+                    data-i18n="proj_lib_t"
+                  >
                     Library Management System
                   </h3>
 
-                  <p class="text-gray-600 mb-4">
+                  <p class="text-gray-600 mb-4" data-i18n="proj_lib_p">
                     Desktop application developed using C# and .NET Framework to
                     efficiently manage library operations. The system includes
                     three user roles: Admin, Instructor, and Student. Admin
@@ -1077,7 +1197,7 @@
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="library"
                   >
-                    View Project →
+                    <span data-i18n="proj_view_proj">View Project →</span>
                   </a>
 
                   <a
@@ -1185,11 +1305,14 @@
                 />
 
                 <div class="p-6">
-                  <h3 class="text-2xl font-semibold mb-3">
+                  <h3
+                    class="text-2xl font-semibold mb-3"
+                    data-i18n="proj_dvld_t"
+                  >
                     DVLD – Driving License Management System
                   </h3>
 
-                  <p class="text-gray-600 mb-4">
+                  <p class="text-gray-600 mb-4" data-i18n="proj_dvld_p">
                     A desktop application built with C# and .NET Framework for
                     managing driving license operations. Covers license issuing,
                     renewal, replacement, and detention. Includes scheduling and
@@ -1220,7 +1343,7 @@
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="dvld"
                   >
-                    View Screenshots →
+                    <span data-i18n="proj_view_ss">View Screenshots →</span>
                   </a>
 
                   <a
@@ -1379,11 +1502,14 @@
                 />
 
                 <div class="p-6">
-                  <h3 class="text-2xl font-semibold mb-3">
+                  <h3
+                    class="text-2xl font-semibold mb-3"
+                    data-i18n="proj_crime_t"
+                  >
                     CrimeGame – Desktop Game Application
                   </h3>
 
-                  <p class="text-gray-600 mb-4">
+                  <p class="text-gray-600 mb-4" data-i18n="proj_crime_p">
                     A desktop game application built with C# and .NET Framework,
                     converting a PowerPoint-based game into a single,
                     self-contained application. The original setup relied on two
@@ -1420,7 +1546,7 @@
                     class="glightbox text-cyan-500 font-semibold hover:underline"
                     data-gallery="game-desktop"
                   >
-                    View Screenshots →
+                    <span data-i18n="proj_view_ss">View Screenshots →</span>
                   </a>
 
                   <a
@@ -1481,10 +1607,13 @@
       aria-label="Architecture and Engineering Section"
     >
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-6">
+        <h2 class="text-4xl font-bold text-center mb-6" data-i18n="eng_title">
           Architecture &amp; Engineering
         </h2>
-        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+        <p
+          class="text-gray-600 text-center max-w-2xl mx-auto mb-16"
+          data-i18n="eng_desc"
+        >
           Beyond building features, I focus on how a system is organized, how
           its data stays consistent, and how it can be extended as requirements
           grow. The following examples come from actual projects.
@@ -1498,8 +1627,13 @@
             >
               <i class="fas fa-cubes text-teal-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Modular Structure</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c1_t">
+              Modular Structure
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c1_d"
+            >
               The E-commerce Admin Dashboard and the Laravel Modular Monolith
               project are organized as modular monoliths, grouping related
               business logic into isolated modules. This keeps each domain
@@ -1514,10 +1648,13 @@
             >
               <i class="fas fa-sitemap text-indigo-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c2_t">
               Actions Pattern &amp; Dependency Injection
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c2_d"
+            >
               Business operations are expressed as single-responsibility action
               classes, injected where needed. This makes each action testable in
               isolation and keeps controllers and services focused on
@@ -1532,10 +1669,13 @@
             >
               <i class="fas fa-shield-alt text-red-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c3_t">
               Policies &amp; Authorization
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c3_d"
+            >
               Authorization is handled through Laravel Policies and Spatie
               Permission, separating permission logic from business logic.
               Resources are scoped to their owner, and role-based access
@@ -1550,10 +1690,13 @@
             >
               <i class="fas fa-lock text-yellow-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c4_t">
               Inventory Consistency
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c4_d"
+            >
               In the E-commerce Admin Dashboard, inventory balance changes are
               executed inside database transactions with pessimistic locking.
               The system enforces invariants — stock cannot go negative,
@@ -1569,8 +1712,13 @@
             >
               <i class="fas fa-history text-orange-500 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Audit History</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c5_t">
+              Audit History
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c5_d"
+            >
               Inventory movements are recorded as an append-only log, tracking
               the reason, source type, and source ID for each change. This
               provides a queryable audit trail of every balance mutation without
@@ -1585,10 +1733,13 @@
             >
               <i class="fas fa-tasks text-purple-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c6_t">
               Approval Workflows &amp; Validation
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c6_d"
+            >
               Supplier products go through an approval workflow that separates
               approval status from active/inactive state. Supplier-proposed
               changes are staged and reviewed before overwriting approved data.
@@ -1604,10 +1755,13 @@
             >
               <i class="fas fa-layer-group text-blue-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c7_t">
               Layered Architecture (.NET)
             </h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c7_d"
+            >
               The Taskeen backend API is structured with Clean Architecture,
               clearly separating API, application, and data access layers. The
               DVLD and Library desktop systems use a 3-tier architecture to
@@ -1622,8 +1776,13 @@
             >
               <i class="fas fa-vial text-green-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Automated Testing</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c8_t">
+              Automated Testing
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c8_d"
+            >
               The Laravel Modular Monolith and E-commerce Admin Dashboard
               include automated tests. Writing tests alongside business logic
               provides confidence that complex workflows — such as inventory
@@ -1639,8 +1798,13 @@
             >
               <i class="fas fa-project-diagram text-gray-600 text-xl"></i>
             </div>
-            <h4 class="font-semibold text-gray-800 mb-2">Maintainability</h4>
-            <p class="text-gray-600 text-sm leading-relaxed">
+            <h4 class="font-semibold text-gray-800 mb-2" data-i18n="eng_c9_t">
+              Maintainability
+            </h4>
+            <p
+              class="text-gray-600 text-sm leading-relaxed"
+              data-i18n="eng_c9_d"
+            >
               Across projects, the goal is to write code that can be changed
               without unintended side effects. Separation of concerns,
               single-responsibility actions, and clear module boundaries make it
@@ -1659,11 +1823,16 @@
       aria-label="Contact Section"
     >
       <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-8">Let's Work Together</h2>
-        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-8" data-i18n="contact_title">
+          Let\'s Work Together
+        </h2>
+        <p
+          class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
+          data-i18n="contact_desc"
+        >
           I am currently open to new professional opportunities. Whether you are
           a recruiter, hiring manager, or potential client looking for a
-          dedicated backend developer, I would love to connect. Let's build
+          dedicated backend developer, I would love to connect. Let\'s build
           something great together!
         </p>
 
@@ -1674,7 +1843,7 @@
             class="bg-laravel hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           >
             <i class="fas fa-envelope" aria-hidden="true"></i>
-            Email Me
+            <span data-i18n="contact_email">Email Me</span>
           </a>
           <a
             href="https://github.com/Hussein1423"
@@ -1684,7 +1853,7 @@
             class="bg-gray-700 hover:bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           >
             <i class="fab fa-github" aria-hidden="true"></i>
-            GitHub
+            <span data-i18n="contact_github">GitHub</span>
           </a>
           <a
             href="https://www.linkedin.com/in/husseinQaid/"
@@ -1694,11 +1863,11 @@
             class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           >
             <i class="fab fa-linkedin" aria-hidden="true"></i>
-            LinkedIn
+            <span data-i18n="contact_linkedin">LinkedIn</span>
           </a>
         </div>
 
-        <p class="text-gray-400">
+        <p class="text-gray-400" data-i18n="contact_footer">
           &copy; 2025 Hussein Qaid. All rights reserved.
         </p>
       </div>
@@ -1738,6 +1907,341 @@
           },
         },
       };
+    </script>
+
+    <!-- Localization Script -->
+    <script>
+      const i18n = {
+        en: {
+          nav_home: "Home",
+          nav_about: "About",
+          nav_skills: "Skills",
+          nav_projects: "Projects",
+          nav_eng: "Engineering",
+          nav_contact: "Contact",
+
+          hero_role: "Full-Stack Developer focused on Backend",
+          hero_desc:
+            "Building robust backend systems, RESTful APIs, and maintainable web applications — with Laravel, .NET, and SQL as core tools, and a solid understanding of the full stack from database to frontend.",
+          hero_btn_work: "View My Work",
+          hero_btn_touch: "Get In Touch",
+          hero_btn_resume: "Download Resume",
+
+          about_title: "About Me",
+          about_who: "Who I Am",
+          about_p1:
+            "I am a Full-Stack Developer with a strong focus on backend development. I build web applications and backend systems using Laravel and .NET — designing the logic, data layer, and APIs that make applications work reliably.",
+          about_p2:
+            "While my primary strength is on the server side, I work across the full stack and understand how frontend and backend fit together to deliver a complete product.",
+          about_what: "What I Build",
+          about_p3:
+            "I build web applications backed by relational databases, REST APIs, and structured business logic. I work with authentication and authorization systems, database transactions, and the kind of data-driven features that form the core of most real-world applications.",
+          about_p4:
+            "I pay attention to how systems are designed — keeping code maintainable, keeping data consistent, and building solutions that can grow as requirements change.",
+
+          about_f1_t: "Backend Systems",
+          about_f1_d:
+            "REST APIs, business logic, and server-side application structure with Laravel and .NET.",
+          about_f2_t: "Databases & SQL",
+          about_f2_d:
+            "Relational database design, complex queries, transactions, and data integrity with SQL Server and MySQL.",
+          about_f3_t: "Auth & Design",
+          about_f3_d:
+            "Authentication, authorization, and software design patterns that keep applications secure and maintainable.",
+
+          skills_title: "Skills",
+          skills_backend: "Backend",
+          skills_databases: "Databases",
+          skills_arch: "Architecture & Engineering",
+          skills_frontend: "Frontend",
+          skills_tools: "Tools",
+          skills_learning: "Currently Learning",
+          skills_learning_desc: "Technologies I am actively exploring",
+          skills_soft: "Soft Skills",
+
+          skill_db_design: "Database Design",
+          skill_db_trans: "Transactions & Data Integrity",
+          skill_db_index: "Indexing & Stored Procedures",
+          skill_arch_mod: "Modular Monolith",
+          skill_arch_3t: "3-Tier Architecture",
+          skill_arch_mvc: "MVC Design Pattern",
+          skill_arch_oop: "Object-Oriented Programming",
+          skill_arch_role: "Role-Based Authorization",
+          skill_arch_mono: "Monolithic Architecture",
+
+          skill_soft_1: "Problem Solving",
+          skill_soft_2: "Attention to Detail",
+          skill_soft_3: "Critical Thinking",
+          skill_soft_4: "Continuous Learning",
+          skill_soft_5: "Adaptability",
+          skill_soft_6: "Communication",
+
+          proj_title: "Featured Projects",
+          proj_tab_web: "Web Projects",
+          proj_tab_desktop: "Desktop Projects",
+          proj_no_prev: "No preview available",
+
+          proj_ecomm_p1:
+            "An e-commerce administration system built with Laravel, Livewire, and Filament. Structured as a modular monolith using the Actions pattern and Dependency Injection, with role and permission management through Spatie Permission and Laravel Policies.",
+          proj_ecomm_p2:
+            "Covers product management with variants and a supplier approval workflow that separates approval status from active/inactive state — supplier-proposed changes do not directly overwrite approved data. The inventory module tracks stock quantities, reserved quantities, and available balances. Inventory movements are recorded as an append-only audit log. Balance mutations are executed within database transactions using pessimistic locking to maintain consistency and enforce invariants such as preventing negative stock or reserved quantities exceeding stock.",
+          proj_career_p:
+            "A web platform for AI-powered career guidance. Users upload their CV and specify a target job to receive generated interview questions and four analysis reports covering technical skills, soft skills, answer quality, and CV–job alignment. Built with a JavaScript and Alpine.js frontend consuming an AI API.",
+          proj_yemenin_p:
+            "A professional networking and jobs platform built from scratch with Laravel and Livewire. The system handles user authentication (including Google login), user profiles, posts and comments, a follow system, company pages, job listings, real-time chat, and notifications. An admin dashboard manages users and jobs. Integrates with <strong>CareerAI</strong> for CV analysis.",
+
+          proj_taskeen_t: "Taskeen – Task Management System (Backend API)",
+          proj_taskeen_p:
+            "A backend API for team task management built with ASP.NET Core and Clean Architecture. Provides RESTful endpoints for task assignment, status tracking, and JWT-based authentication. Data access is handled via ADO.NET with stored procedures and asynchronous database operations (async/await) to keep queries efficient and the codebase maintainable.",
+
+          proj_lib_t: "Library Management System",
+          proj_lib_p:
+            "Desktop application developed using C# and .NET Framework to efficiently manage library operations. The system includes three user roles: Admin, Instructor, and Student. Admin oversees all operations, including managing books, users, borrow records, and approving borrowing requests. Instructors guide specific books and request borrowing, while students can view available books and track their borrow history. The application follows a 3-tier architecture with a role-based permission system for maintainability, scalability, and a smooth organized user experience.",
+
+          proj_dvld_t: "DVLD – Driving License Management System",
+          proj_dvld_p:
+            "A desktop application built with C# and .NET Framework for managing driving license operations. Covers license issuing, renewal, replacement, and detention. Includes scheduling and tracking of written, vision, and street tests; managing people, drivers, and users; and maintaining audit logs to preserve data integrity. Structured with a 3-tier architecture for a clean separation between UI, business logic, and data access.",
+
+          proj_crime_t: "CrimeGame – Desktop Game Application",
+          proj_crime_p:
+            "A desktop game application built with C# and .NET Framework, converting a PowerPoint-based game into a single, self-contained application. The original setup relied on two separate PowerPoint and Excel files totalling ~150MB with significant limitations. The rebuilt version runs at 18MB, integrates all features in one place, and is structured with a 3-tier architecture for maintainability and future updates.",
+
+          proj_view_ss: "View Screenshots →",
+          proj_view_proj: "View Project →",
+          proj_view_ss_single: "View Screenshot →",
+
+          eng_title: "Architecture & Engineering",
+          eng_desc:
+            "Beyond building features, I focus on how a system is organized, how its data stays consistent, and how it can be extended as requirements grow. The following examples come from actual projects.",
+          eng_c1_t: "Modular Structure",
+          eng_c1_d:
+            "The E-commerce Admin Dashboard and the Laravel Modular Monolith project are organized as modular monoliths, grouping related business logic into isolated modules. This keeps each domain self-contained while sharing a single deployable application.",
+          eng_c2_t: "Actions Pattern & Dependency Injection",
+          eng_c2_d:
+            "Business operations are expressed as single-responsibility action classes, injected where needed. This makes each action testable in isolation and keeps controllers and services focused on coordination rather than business logic.",
+          eng_c3_t: "Policies & Authorization",
+          eng_c3_d:
+            "Authorization is handled through Laravel Policies and Spatie Permission, separating permission logic from business logic. Resources are scoped to their owner, and role-based access controls what each type of user can read or modify.",
+          eng_c4_t: "Inventory Consistency",
+          eng_c4_d:
+            "In the E-commerce Admin Dashboard, inventory balance changes are executed inside database transactions with pessimistic locking. The system enforces invariants — stock cannot go negative, reserved quantity cannot exceed stock — before any mutation is committed.",
+          eng_c5_t: "Audit History",
+          eng_c5_d:
+            "Inventory movements are recorded as an append-only log, tracking the reason, source type, and source ID for each change. This provides a queryable audit trail of every balance mutation without modifying historical records.",
+          eng_c6_t: "Approval Workflows & Validation",
+          eng_c6_d:
+            "Supplier products go through an approval workflow that separates approval status from active/inactive state. Supplier-proposed changes are staged and reviewed before overwriting approved data. Business rules are enforced through Form Requests, keeping validation close to the action that needs it.",
+          eng_c7_t: "Layered Architecture (.NET)",
+          eng_c7_d:
+            "The Taskeen backend API is structured with Clean Architecture, clearly separating API, application, and data access layers. The DVLD and Library desktop systems use a 3-tier architecture to isolate UI, business rules, and database access.",
+          eng_c8_t: "Automated Testing",
+          eng_c8_d:
+            "The Laravel Modular Monolith and E-commerce Admin Dashboard include automated tests. Writing tests alongside business logic provides confidence that complex workflows — such as inventory mutations and approval transitions — behave correctly after changes.",
+          eng_c9_t: "Maintainability",
+          eng_c9_d:
+            "Across projects, the goal is to write code that can be changed without unintended side effects. Separation of concerns, single-responsibility actions, and clear module boundaries make it easier to add features or modify behavior as requirements evolve.",
+
+          contact_title: "Let's Work Together",
+          contact_desc:
+            "I am currently open to new professional opportunities. Whether you are a recruiter, hiring manager, or potential client looking for a dedicated backend developer, I would love to connect. Let's build something great together!",
+          contact_email: "Email Me",
+          contact_github: "GitHub",
+          contact_linkedin: "LinkedIn",
+          contact_footer: "&copy; 2025 Hussein Qaid. All rights reserved.",
+        },
+        ar: {
+          nav_home: "الرئيسية",
+          nav_about: "نبذة عني",
+          nav_skills: "المهارات",
+          nav_projects: "المشاريع",
+          nav_eng: "هندسة البرمجيات",
+          nav_contact: "تواصل معي",
+
+          hero_role: "مطور Full-Stack بتركيز على الـ Backend",
+          hero_desc:
+            "أقوم ببناء أنظمة خلفية قوية، وواجهات برمجة تطبيقات (REST APIs)، وتطبيقات ويب قابلة للصيانة — باستخدام Laravel و .NET و SQL كأدوات أساسية، وفهم شامل للأنظمة المتكاملة من قاعدة البيانات إلى واجهة المستخدم.",
+          hero_btn_work: "عرض أعمالي",
+          hero_btn_touch: "تواصل معي",
+          hero_btn_resume: "تحميل السيرة الذاتية",
+
+          about_title: "نبذة عني",
+          about_who: "من أنا",
+          about_p1:
+            "أنا مطور Full-Stack بتركيز قوي على تطوير الأنظمة الخلفية (Backend). أبني تطبيقات ويب وأنظمة باستخدام Laravel و .NET — حيث أصمم المنطق البرمجي، وطبقات البيانات، والـ APIs لتعمل التطبيقات بكفاءة وموثوقية.",
+          about_p2:
+            "على الرغم من أن نقطة قوتي الأساسية تكمن في جانب الخادم (server-side)، إلا أنني أعمل على جميع طبقات التطبيق (full-stack) وأفهم تماماً كيف تتكامل الواجهة الأمامية مع الخلفية لتقديم منتج متكامل.",
+          about_what: "ماذا أبني",
+          about_p3:
+            "أبني تطبيقات ويب تعتمد على قواعد بيانات علائقية، وواجهات برمجة تطبيقات REST APIs، ومنطق أعمال مهيكل. أعمل على أنظمة المصادقة والصلاحيات، ومعاملات قواعد البيانات (transactions)، والميزات المعتمدة على البيانات والتي تشكل جوهر معظم التطبيقات الواقعية.",
+          about_p4:
+            "أولي اهتماماً كبيراً لكيفية تصميم الأنظمة — بهدف الحفاظ على نظافة الكود وقابليته للصيانة، وضمان اتساق البيانات، وبناء حلول قادرة على التوسع مع تغير المتطلبات.",
+
+          about_f1_t: "أنظمة Backend",
+          about_f1_d:
+            "بناء REST APIs، ومنطق الأعمال، وهيكلة تطبيقات جانب الخادم باستخدام Laravel و .NET.",
+          about_f2_t: "قواعد البيانات و SQL",
+          about_f2_d:
+            "تصميم قواعد البيانات العلائقية، وكتابة الاستعلامات المعقدة، والتحكم في المعاملات لضمان سلامة البيانات باستخدام SQL Server و MySQL.",
+          about_f3_t: "المصادقة وتصميم الأنظمة",
+          about_f3_d:
+            "تطبيق أنماط تصميم البرمجيات للحفاظ على التطبيقات آمنة وقابلة للصيانة بسهولة.",
+
+          skills_title: "المهارات",
+          skills_backend: "تطوير Backend",
+          skills_databases: "قواعد البيانات",
+          skills_arch: "هندسة البرمجيات",
+          skills_frontend: "تطوير الواجهات",
+          skills_tools: "الأدوات",
+          skills_learning: "أتعلم حالياً",
+          skills_learning_desc: "تقنيات أستكشفها بفاعلية",
+          skills_soft: "المهارات الشخصية",
+
+          skill_db_design: "تصميم قواعد البيانات",
+          skill_db_trans: "إدارة المعاملات وسلامة البيانات",
+          skill_db_index: "الفهرسة والإجراءات المخزنة",
+          skill_arch_mod: "الأنظمة المتجانسة المجزأة (Modular Monolith)",
+          skill_arch_3t: "معمارية الثلاث طبقات (3-Tier)",
+          skill_arch_mvc: "نمط تصميم MVC",
+          skill_arch_oop: "البرمجة كائنية التوجه (OOP)",
+          skill_arch_role: "صلاحيات الوصول المبنية على الأدوار",
+          skill_arch_mono: "معمارية المونوليث",
+
+          skill_soft_1: "حل المشكلات",
+          skill_soft_2: "الاهتمام بالتفاصيل",
+          skill_soft_3: "التفكير النقدي",
+          skill_soft_4: "التعلم المستمر",
+          skill_soft_5: "المرونة والتكيف",
+          skill_soft_6: "التواصل الفعال",
+
+          proj_title: "أبرز المشاريع",
+          proj_tab_web: "مشاريع الويب",
+          proj_tab_desktop: "مشاريع سطح المكتب",
+          proj_no_prev: "لا يوجد عرض متاح",
+
+          proj_ecomm_p1:
+            "نظام إدارة متجر إلكتروني مبني باستخدام Laravel و Livewire و Filament. تم تصميمه كـ Modular Monolith باستخدام نمط Actions و Dependency Injection، مع نظام متقدم للصلاحيات وإدارة الأدوار باستخدام Spatie Permission و Laravel Policies.",
+          proj_ecomm_p2:
+            "يغطي النظام إدارة المنتجات بمتغيراتها (variants)، ونظام موافقة للموردين يفصل بين حالة الموافقة وحالة التفعيل (النشط/غير النشط). يتتبع نظام المخزون الكميات المتاحة والمحجوزة، ويقوم بتسجيل حركات المخزون كسجل غير قابل للتعديل (audit log). تتم عمليات المخزون داخل معاملات (database transactions) مع القفل المتشائم لضمان سلامة البيانات ومنع أخطاء المخزون بالسالب.",
+          proj_career_p:
+            "منصة ويب للتوجيه المهني مدعومة بالذكاء الاصطناعي. يقوم المستخدمون برفع سيرتهم الذاتية وتحديد الوظيفة المستهدفة للحصول على أسئلة مقابلة مُولدة بالإضافة إلى أربعة تقارير تحليلية تشمل: المهارات التقنية، والمهارات الشخصية، وجودة الإجابات، ومدى توافق السيرة الذاتية مع الوظيفة. المنصة مبنية باستخدام JavaScript و Alpine.js في الواجهة الأمامية مع استهلاك AI API.",
+          proj_yemenin_p:
+            "منصة احترافية للتواصل والوظائف تم بناؤها من الصفر باستخدام Laravel و Livewire. يدعم النظام مصادقة المستخدمين (بما في ذلك Google)، والملفات الشخصية، والمنشورات والتعليقات، ونظام المتابعة، وصفحات الشركات، وقوائم الوظائف، والمحادثات المباشرة، والإشعارات. يحتوي أيضاً على لوحة تحكم للإدارة. متكامل مع <strong>CareerAI</strong> لتحليل السير الذاتية.",
+
+          proj_taskeen_t: "تسكين – نظام إدارة المهام (Backend API)",
+          proj_taskeen_p:
+            "واجهة برمجة تطبيقات (API) لإدارة مهام الفِرق مبنية باستخدام ASP.NET Core ومعمارية Clean Architecture. توفر RESTful APIs لتعيين المهام، وتتبع الحالات، والمصادقة المعتمدة على JWT. تتم إدارة البيانات عبر ADO.NET باستخدام الإجراءات المخزنة (stored procedures) والعمليات غير المتزامنة لضمان كفاءة الاستعلامات.",
+
+          proj_lib_t: "نظام إدارة المكتبات",
+          proj_lib_p:
+            "تطبيق سطح مكتب مطور باستخدام C# و .NET Framework لإدارة عمليات المكتبة. يشمل النظام 3 أدوار: مدير، ومحاضر، وطالب. يقوم المدير بإدارة الكتب والمستخدمين وطلبات الاستعارة. بينما يمكن للمحاضرين توجيه طلبات استعارة لكتب معينة، ويمكن للطلاب استعراض الكتب المتاحة وتتبع تاريخ استعاراتهم. التطبيق يعتمد على معمارية 3-Tier ونظام صلاحيات منظم.",
+
+          proj_dvld_t: "نظام إدارة رخص القيادة (DVLD)",
+          proj_dvld_p:
+            "تطبيق سطح مكتب مبني باستخدام C# و .NET Framework لإدارة عمليات إصدار، وتجديد، واستبدال رخص القيادة. يتضمن التطبيق جدولة وتتبع الاختبارات (النظرية، الرؤية، والشارع)، وإدارة البيانات وسجلات التدقيق للحفاظ على سلامة البيانات. تمت هيكلة التطبيق بمعمارية 3-Tier لفصل الواجهة عن منطق الأعمال.",
+
+          proj_crime_t: "لعبة الجريمة – تطبيق سطح المكتب",
+          proj_crime_p:
+            "لعبة لسطح المكتب مبنية باستخدام C# و .NET Framework، تم تحويلها من لعبة تعتمد على ملفات PowerPoint و Excel بحجم ~150 ميجابايت إلى تطبيق مستقل بحجم 18 ميجابايت فقط. يجمع كل الميزات في مكان واحد وتم بناؤه باستخدام معمارية 3-Tier لضمان سهولة التحديث مستقبلاً.",
+
+          proj_view_ss: "عرض الصور ←",
+          proj_view_proj: "عرض المشروع ←",
+          proj_view_ss_single: "عرض الصورة ←",
+
+          eng_title: "هندسة وبناء البرمجيات",
+          eng_desc:
+            "بعيداً عن مجرد بناء الميزات، أركز على كيفية تنظيم النظام، وضمان اتساق بياناته، وقابليته للتوسع مع نمو المتطلبات. الأمثلة التالية مأخوذة من مشاريع واقعية.",
+          eng_c1_t: "البنية المجزأة (Modular)",
+          eng_c1_d:
+            "تم تنظيم مشروع E-commerce Admin Dashboard ومشروع Laravel Modular Monolith كأنظمة متجانسة مجزأة (modular monoliths). حيث يتم تجميع منطق الأعمال ذي الصلة في وحدات معزولة لضمان استقلالية كل جزء مع مشاركة تطبيق واحد قابل للنشر.",
+          eng_c2_t: "نمط الـ Actions وحقن التبعيات",
+          eng_c2_d:
+            "يتم التعبير عن العمليات البرمجية كفئات (Action Classes) ذات مسؤولية مفردة. هذا يجعل كل خطوة قابلة للاختبار بشكل مستقل ويبقي الـ Controllers والخدمات مسؤولة عن التنسيق بدلاً من منطق الأعمال الأساسي.",
+          eng_c3_t: "الصلاحيات والسياسات (Policies)",
+          eng_c3_d:
+            "تتم إدارة صلاحيات الوصول من خلال Laravel Policies و Spatie Permission، لفصل منطق الصلاحيات عن منطق الأعمال. يتم تقييد الموارد حسب المالك بناءً على قواعد دقيقة.",
+          eng_c4_t: "اتساق المخزون (Inventory)",
+          eng_c4_d:
+            "في لوحة تحكم المتجر، يتم تنفيذ تغييرات المخزون داخل معاملات (transactions) باستخدام القفل المتشائم لمنع أخطاء المخزون بالسالب أو تجاوز الكمية المحجوزة للكمية المتاحة.",
+          eng_c5_t: "سجل التدقيق (Audit History)",
+          eng_c5_d:
+            "يتم تسجيل حركات المخزون كسجل قراءة فقط (append-only log)، ليتتبع السبب والمصدر لكل عملية. يوفر ذلك مسار تدقيق كامل لكل حركة بدون التعديل على السجلات التاريخية السابقة.",
+          eng_c6_t: "سير عمل الموافقات والتحقق",
+          eng_c6_d:
+            "تمر منتجات الموردين بسير عمل موافقات يفصل حالة الموافقة عن التفعيل (النشط/غير النشط). التعديلات المقترحة تُراجع أولاً ولا تكتب فوق البيانات المعتمدة بشكل مباشر.",
+          eng_c7_t: "معمارية الطبقات (.NET)",
+          eng_c7_d:
+            "نظام Taskeen Backend API مبني باستخدام Clean Architecture التي تفصل بوضوح بين طبقات الـ API والتطبيق والبيانات. وتطبيقات سطح المكتب تستخدم معمارية 3-Tier.",
+          eng_c8_t: "الاختبار المؤتمت (Automated Testing)",
+          eng_c8_d:
+            "تتضمن المشاريع اختبارات مؤتمتة متكاملة. كتابة الاختبارات جنباً إلى جنب مع منطق الأعمال يمنح الثقة بأن سير العمل المعقد يعمل بشكل صحيح بعد التغييرات.",
+          eng_c9_t: "قابلية الصيانة (Maintainability)",
+          eng_c9_d:
+            "الهدف في جميع المشاريع هو كتابة كود يمكن تعديله بدون آثار جانبية. فصل الاهتمامات وتحديد حدود واضحة يسهّل إضافة الميزات بمرونة.",
+
+          contact_title: "لنبنِ برمجيات رائعة معاً",
+          contact_desc:
+            "أنا متاح حالياً لفرص مهنية جديدة. سواء كنت مسؤول توظيف، أو مديراً، أو عميلاً يبحث عن مطور Backend متخصص ومجتهد، يسعدني التواصل معك. لنتعاون معاً!",
+          contact_email: "أرسل بريد إلكتروني",
+          contact_github: "حساب GitHub",
+          contact_linkedin: "حساب LinkedIn",
+          contact_footer: "&copy; 2025 حسين قائد. جميع الحقوق محفوظة.",
+        },
+      };
+
+      // By default the page is English. Do not persist.
+      let currentLang = "en";
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        const html = document.getElementById("html-root");
+        html.lang = lang;
+        html.dir = lang === "ar" ? "rtl" : "ltr";
+
+        // Update document title and SEO if needed
+        document.title =
+          lang === "ar"
+            ? "حسين قائد — مطور Full-Stack | متخصص في Backend"
+            : "Hussein Qaid — Full-Stack Developer | Backend Focused";
+
+        const desktopSwitcher = document.getElementById(
+          "lang-switcher-desktop",
+        );
+        const mobileSwitcher = document.getElementById("lang-switcher-mobile");
+        if (lang === "ar") {
+          if (desktopSwitcher) desktopSwitcher.innerText = "English";
+          if (mobileSwitcher) mobileSwitcher.innerText = "English";
+        } else {
+          if (desktopSwitcher) desktopSwitcher.innerText = "العربية";
+          if (mobileSwitcher) mobileSwitcher.innerText = "العربية";
+        }
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (i18n[lang] && i18n[lang][key]) {
+            el.innerHTML = i18n[lang][key];
+          }
+        });
+
+        // Flip arrow icons for RTL
+        document.querySelectorAll(".fa-arrow-right").forEach((icon) => {
+          if (lang === "ar") {
+            icon.classList.remove("fa-arrow-right");
+            icon.classList.add("fa-arrow-left");
+            icon.setAttribute("data-flipped", "true");
+          }
+        });
+        document.querySelectorAll(".fa-arrow-left").forEach((icon) => {
+          if (lang === "en" && icon.getAttribute("data-flipped") === "true") {
+            icon.classList.remove("fa-arrow-left");
+            icon.classList.add("fa-arrow-right");
+            icon.removeAttribute("data-flipped");
+          }
+        });
+      }
+
+      function toggleLang() {
+        setLanguage(currentLang === "en" ? "ar" : "en");
+      }
     </script>
   </body>
 </html>
